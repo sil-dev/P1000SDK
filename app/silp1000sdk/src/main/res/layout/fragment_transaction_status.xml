@@ -1,0 +1,165 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:id="@+id/fragment_mainLayout">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="center"
+        android:orientation="vertical"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true">
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="15dp"
+            android:orientation="vertical">
+
+            <ImageView
+                android:id="@+id/imgsuccess"
+                android:layout_width="130dp"
+                android:layout_height="130dp"
+                android:layout_gravity="center"
+                android:src="@drawable/transsuccess"
+                />
+
+            <TextView
+                android:id="@+id/txt_trans_status"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="Transaction Successful"
+                android:textColor="@color/colorPrimaryDark"
+                android:textSize="@dimen/txtmid" />
+
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="15dp"
+            android:padding="10dp"
+            android:background="@drawable/rounded_light_blugray"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:id="@+id/txtMercName"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:padding="10dp"
+                    android:text="Merchant Name"
+                    android:textColor="@color/colorPrimaryDark"
+                    android:textSize="@dimen/txtsize"
+                    android:textStyle="bold" />
+
+
+                <Button
+                    android:id="@+id/btnDetails"
+                    android:layout_width="0dp"
+                    android:layout_height="30dp"
+                    android:layout_weight="0.5"
+                    android:background="@drawable/whiteroundbutton"
+                    android:gravity="center"
+                    android:text="Receipt"
+                    android:textColor="@color/colorPrimaryDark"
+                    android:textSize="@dimen/txtsmall" />
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/txtAED"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:text="150.00"
+                android:textColor="@color/colorPrimaryDark"
+                android:textSize="@dimen/txtsize"
+                android:textStyle="bold" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="15dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Transaction ID: "
+                    android:textColor="@color/colorPrimaryDark"
+                    android:textSize="@dimen/txtsize"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/txtTransId"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:text="213/155/16122"
+                    android:layout_weight="1"
+                    android:textColor="@color/colorPrimaryDark"
+                    android:textSize="@dimen/txtsize" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/payment_type"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Payment Type: "
+                    android:textColor="@color/colorPrimaryDark"
+                    android:textSize="@dimen/txtsize"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/txtpaytype"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:text="Card"
+                    android:layout_weight="1"
+                    android:textColor="@color/colorPrimaryDark"
+                    android:textSize="@dimen/txtsize" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="10dp"
+                android:layout_marginLeft="10dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Remark : "
+                    android:textColor="@color/colorPrimaryDark"
+                    android:textSize="@dimen/txtsize"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/txtRemark"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:text="Payment or XYZ coffee"
+                    android:layout_weight="1"
+                    android:textColor="@color/colorPrimaryDark"
+                    android:textSize="@dimen/txtsize"  />
+
+            </LinearLayout>
+
+        </LinearLayout>
+    </LinearLayout>
+</RelativeLayout>

@@ -1,0 +1,4621 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<!--[if !mso]><!-->
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+	<!--<![endif]-->
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<title></title>
+	
+	<!--[if (gte mso 9)|(IE)]>
+	<style type="text/css">
+		table {border-collapse: collapse;}
+	</style>
+	<![endif]-->
+	
+	<style type="text/css">
+		table
+		{
+			text-align: justify !important;
+		}
+		/* Basics */
+#background {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: 100%;
+    opacity: 0.4;
+    filter:alpha(opacity=40);
+}
+
+body {
+	margin: 0 !important;
+	padding: 0;
+	background-color: #ffffff;
+}
+table {
+	border-spacing: 0;
+	font-family: sans-serif;
+	color: #333333;
+}
+td {
+	padding: 0;
+}
+img {
+	border: 0;
+}
+div[style*="margin: 16px 0"] { 
+	margin:0 !important;
+}
+.wrapper {
+	width: 100%;
+	table-layout: fixed;
+	-webkit-text-size-adjust: 100%;
+	-ms-text-size-adjust: 100%;
+}
+.webkit {
+	max-width: 1000px;
+	margin: 0 auto;
+}
+.outer {
+	Margin: 0 auto;
+	width: 100%;
+	max-width: 1000px;
+}
+.inner {
+	padding: 10px;
+}
+.contents {
+	width: 100%;
+}
+p {
+	Margin: 0;
+}
+a {
+	color: #ee6a56;
+	text-decoration: underline;
+}
+.h1 {
+	font-size: 21px;
+	font-weight: bold;
+	Margin-bottom: 18px;
+}
+.h2 {
+	font-size: 18px;
+	font-weight: bold;
+	Margin-bottom: 12px;
+}
+.full-width-image img {
+	width: 100%;
+	max-width: 600px;
+	height: auto;
+}
+
+/* One column layout */
+.one-column .contents {
+	text-align: left;
+}
+.one-column p {
+	font-size: 14px;
+	Margin-bottom: 10px;
+}
+
+/*Two column layout*/
+.two-column {
+	text-align: center;
+	font-size: 0;
+}
+.two-column .column {
+	width: 100%;
+	max-width: 500px;
+	display: inline-block;
+	vertical-align: top;
+}
+.two-column .contents {
+	font-size: 14px;
+	text-align: left;
+}
+.two-column img {
+	width: 100%;
+	max-width: 280px;
+	height: auto;
+}
+.two-column .text {
+	padding-top: 10px;
+}
+
+/*Three column layout*/
+.three-column {
+	text-align: center;
+	font-size: 0;
+	padding-top: 10px;
+	padding-bottom: 10px;
+}
+.three-column .column {
+	width: 100%;
+	max-width: 200px;
+	display: inline-block;
+	vertical-align: top;
+}
+.three-column img {
+	width: 100%;
+	max-width: 180px;
+	height: auto;
+}
+.three-column .contents {
+	font-size: 14px;
+	text-align: center;
+}
+.three-column .text {
+	padding-top: 10px;
+}
+
+/* Left sidebar layout */
+.left-sidebar {
+	text-align: center;
+	font-size: 0;
+}
+.left-sidebar .column {
+	width: 100%;
+	display: inline-block;
+	vertical-align: middle;
+}
+.left-sidebar .left {
+	max-width: 100px;
+}
+.left-sidebar .right {
+	max-width: 500px;
+}
+.left-sidebar .img {
+	width: 100%;
+	max-width: 80px;
+	height: auto;
+}
+.left-sidebar .contents {
+	font-size: 14px;
+	text-align: center;
+}
+.left-sidebar a {
+	color: #85ab70;
+}
+
+/* Right sidebar layout */
+.right-sidebar {
+	text-align: center;
+	font-size: 0;
+}
+.right-sidebar .column {
+	width: 100%;
+	display: inline-block;
+	vertical-align: middle;
+}
+.right-sidebar .left {
+	max-width: 100px;
+}
+.right-sidebar .right {
+	max-width: 500px;
+}
+.right-sidebar .img {
+	width: 100%;
+	max-width: 80px;
+	height: auto;
+}
+.right-sidebar .contents {
+	font-size: 14px;
+	text-align: center;
+}
+.right-sidebar a {
+	color: #70bbd9;
+}
+
+/*Media Queries*/
+
+	
+@media screen and (max-width: 400px) {
+	.two-column .column,
+	.three-column .column {
+		max-width: 100% !important;
+	}
+	.two-column img {
+		max-width: 100% !important;
+	}
+	.three-column img {
+		max-width: 50% !important;
+	}
+}
+
+
+@media screen and (min-width: 401px) and (max-width: 620px) {
+	.three-column .column {
+		max-width: 33% !important;
+	}
+	.two-column .column {
+		max-width: 50% !important;
+	}
+}
+
+@media screen and (min-width: 412px) and (max-width: 732px) {
+	.two-column .column,
+	.three-column .column {
+		max-width: 100% !important;
+	}
+	.three-column .column {
+		max-width: 25% !important;
+	}
+	.two-column .column {
+		max-width: 95% !important;
+	}
+}
+/*
+@media screen and (min-width: 320px) and (max-width: 480px){
+	.two-column .column,
+	.three-column .column {
+		max-width: 100% !important;
+	}
+	.three-column .column {
+		max-width: 50% !important;
+	}
+	.two-column .column {
+		max-width: 100% !important;
+	}
+	
+}
+*/
+
+	</style>
+</head>
+<body>
+
+	<center class="wrapper">
+		<div class="webkit">
+			<!--[if (gte mso 9)|(IE)]>
+			<table width="600" align="center">
+			<tr>
+			<td>
+			<![endif]-->
+			<table class="outer" align="center">
+				
+				<tr>
+					<td class="two-column">
+						<!--[if (gte mso 9)|(IE)]>
+						<table width="100%">
+						<tr>
+						<td width="50%" valign="top">
+						<![endif]-->
+						<div class="column">
+							<table width="100%">
+								<tr>
+									<td class="inner">
+										<table class="contents">
+											<tr>
+												<td class="text">
+													This Merchant Agreement (“Agreement”) is made and entered into between the parties as referred(hereinafter referred to as Merchant”),of the First Part ; AND
+												</td>
+											</tr>
+										</table>
+									</td>
+								</tr>
+							</table>
+						</div>
+						<!--[if (gte mso 9)|(IE)]>
+						</td><td width="50%" valign="top">
+						<![endif]-->
+						<div class="column">
+							<table width="100%">
+								<tr>
+									<td class="inner">
+										<table class="contents">
+											<tr>
+												<td class="text">Financial Technology Myanmar Company Limited, a company incorporated  under the laws of the Republic of the Union of Myanmar having its registered oﬃce at  253/255, Room 8, 4 Ward, Pansoedan Street, Kyauktada Township, Yangon  (hereinafterreferredtoas&ldquo;Company&rdquo;),o fthe Second Part</td>
+											</tr>
+										</table>
+									</td>
+								</tr>
+							</table>
+						</div>
+						<!--[if (gte mso 9)|(IE)]>
+						</td>
+						</tr>
+						</table>
+						<![endif]-->
+					</td>
+				</tr>
+				
+				<tr>
+					<td class="two-column">
+						<!--[if (gte mso 9)|(IE)]>
+						<table width="100%">
+						<tr>
+						<td width="50%" valign="top">
+						<![endif]-->
+						<div class="column">
+							<table width="100%">
+								<tr>
+									<td class="inner">
+										<table class="contents">
+											<tr>
+												<td class="text">
+													<b>WHERE AS</b>
+												</td>
+											</tr>
+										</table>
+									</td>
+								</tr>
+							</table>
+						</div>
+						<!--[if (gte mso 9)|(IE)]>
+						</td><td width="50%" valign="top">
+						<![endif]-->
+						<div class="column">
+							<table width="100%">
+								<tr>
+									<td class="inner">
+										<table class="contents">
+											<tr><td></td></tr>
+										</table>
+									</td>
+								</tr>
+							</table>
+						</div>
+						<!--[if (gte mso 9)|(IE)]>
+						</td>
+						</tr>
+						</table>
+						<![endif]-->
+					</td>
+				</tr>
+				
+				
+				<tr>
+					<td class="two-column">
+						<!--[if (gte mso 9)|(IE)]>
+						<table width="100%">
+						<tr>
+						<td width="50%" valign="top">
+						<![endif]-->
+						<div class="column">
+							<table width="100%">
+								<tr>
+									<td class="inner">
+										<table class="contents">
+											<tr>
+											
+												<td width="5%" valign="top" class="text">
+													<div>A</div>
+												</td>
+												<td class="text">
+												  <div>Merchant is engaged in business of products and service sas detailed in RegistrationForm.</div>
+												</td>
+											</tr>
+										</table>
+									</td>
+								</tr>
+							</table>
+						</div>
+						<!--[if (gte mso 9)|(IE)]>
+						</td><td width="50%" valign="top">
+						<![endif]-->
+						<div class="column">
+							<table width="100%">
+								<tr>
+									<td class="inner">
+										<table class="contents">
+											<tr>
+											<td width="5%" valign="top" class="text">
+													<div>B</div>
+												</td>
+												<td width="97%" class="text">
+													<div>Company owns the brand YouCloud and is locatedat the following URL:“www.youcloudglobal.com” (hereinafter referred to as “YouCloud”) and has many registered users to whom the Company oﬀers variousservices;</div>
+												</td>
+											</tr>
+										</table>
+									</td>
+								</tr>
+							</table>
+						</div>
+						<!--[if (gte mso 9)|(IE)]>
+						</td>
+						</tr>
+						</table>
+						<![endif]-->
+					</td>
+				</tr>
+				
+				
+				<tr>
+					<td class="two-column">
+						<!--[if (gte mso 9)|(IE)]>
+						<table width="100%">
+						<tr>
+						<td width="50%" valign="top">
+						<![endif]-->
+						<div class="column">
+							<table width="100%">
+								<tr>
+									<td class="inner">
+										<table class="contents">
+											<tr>
+											<td width="5%" valign="top" class="text">
+													<div>C</div>
+												</td>
+												<td class="text">
+													Merchant is desirous of obtaining YouCloud Services fromthe Company which will allow the Company and/or Merchant customers to make payment for Products and Services as sold by the Merchant through its out letsor from its Website/App.The Company has agreed to provide such Wallet services to Merchant in accordance with the following terms and conditions.
+												</td>
+											</tr>
+										</table>
+									</td>
+								</tr>
+							</table>
+						</div>
+						<!--[if (gte mso 9)|(IE)]>
+						</td><td width="50%" valign="top">
+						<![endif]-->
+						<div class="column">
+							<table width="100%">
+								<tr>
+									<td class="inner">
+										<table class="contents">
+											<tr>
+											<td width="5%" valign="top" class="text">
+													<div>D</div>
+												</td>
+												<td class="text">
+													The above referred Merchant and Company are hereinafter collectively referred to as “Parties” and individually as“Party”.
+												</td>
+											</tr>
+										</table>
+									</td>
+								</tr>
+							</table>
+						</div>
+						<!--[if (gte mso 9)|(IE)]>
+						</td>
+						</tr>
+						</table>
+						<![endif]-->
+					</td>
+				</tr>
+				
+				
+				<tr>
+					<td class="two-column">
+						<!--[if (gte mso 9)|(IE)]>
+						<table width="100%">
+						<tr>
+						<td width="50%" valign="top">
+						<![endif]-->
+						<div class="column">
+							<table width="100%">
+								<tr>
+									<td class="inner">
+										<table class="contents">
+											<tr>
+												<td class="text">
+													<b>NOW THIS AGREEMENT WITNESSETHHERE WITH:</b>
+												</td>
+											</tr>
+										</table>
+									</td>
+								</tr>
+							</table>
+						</div>
+						<!--[if (gte mso 9)|(IE)]>
+						</td><td width="50%" valign="top">
+						<![endif]-->
+						<div class="column">
+							<table width="100%">
+								<tr>
+									<td class="inner">
+										<table class="contents">
+											<tr>
+												<td class="text">
+												
+												</td>
+											</tr>
+										</table>
+									</td>
+								</tr>
+							</table>
+						</div>
+						<!--[if (gte mso 9)|(IE)]>
+						</td>
+						</tr>
+						</table>
+						<![endif]-->
+					</td>
+				</tr>
+				
+				
+				<tr>
+					<td class="two-column">
+						<!--[if (gte mso 9)|(IE)]>
+						<table width="100%">
+						<tr>
+						<td width="50%" valign="top">
+						<![endif]-->
+						<div class="column">
+							<table width="100%">
+								<tr>
+									<td class="inner">
+										<table class="contents">
+											<tr>
+											<td width="5%" valign="top" class="text">
+													<div>1</div>
+												</td>
+												<td class="text">
+													<strong>Deﬁnitions</strong>
+												</td>
+											</tr>
+										</table>
+									</td>
+								</tr>
+							</table>
+						</div>
+						<!--[if (gte mso 9)|(IE)]>
+						</td><td width="50%" valign="top">
+						<![endif]-->
+						<div class="column">
+							<table width="100%">
+								<tr>
+									<td class="inner">
+										<table class="contents">
+											<tr>
+												<td class="text">
+													
+												</td>
+											</tr>
+										</table>
+									</td>
+								</tr>
+							</table>
+						</div>
+						<!--[if (gte mso 9)|(IE)]>
+						</td>
+						</tr>
+						</table>
+						<![endif]-->
+					</td>
+				</tr>
+				
+				
+				
+				
+				<tr>
+					<td class="two-column">
+						<!--[if (gte mso 9)|(IE)]>
+						<table width="100%">
+						<tr>
+						<td width="50%" valign="top">
+						<![endif]-->
+						<div class="column">
+							<table width="100%">
+								<tr>
+									<td class="inner">
+										<table class="contents">
+											<tr>
+											<td width="5%" valign="top" class="text">
+													
+												</td>
+												<td class="text">
+													 or the purpose of this Agreement, the following words and phrases shall have themeaningassigned to them under this Article:
+
+												</td>
+											</tr>
+										</table>
+									</td>
+								</tr>
+							</table>
+						</div>
+						<!--[if (gte mso 9)|(IE)]>
+						</td><td width="50%" valign="top">
+						<![endif]-->
+						<div class="column">
+							<table width="100%">
+								<tr>
+									<td class="inner">
+										<table class="contents">
+											<tr>
+											<td width="5%" valign="top" class="text">
+													<div>1.1</div>
+												</td>
+												<td class="text">
+													“Company” shall mean Financial Technology Myanmar Company Limited.
+												</td>
+											</tr>
+										</table>
+									</td>
+								</tr>
+							</table>
+						</div>
+						<!--[if (gte mso 9)|(IE)]>
+						</td>
+						</tr>
+						</table>
+						<![endif]-->
+					</td>
+				</tr>
+				
+				
+				<tr>
+					<td class="two-column">
+						<!--[if (gte mso 9)|(IE)]>
+						<table width="100%">
+						<tr>
+						<td width="50%" valign="top">
+						<![endif]-->
+						<div class="column">
+							<table width="100%">
+								<tr>
+									<td class="inner">
+										<table class="contents">
+											<tr>
+												<td width="5%" valign="top" class="text">
+													<div>1.2.</div>
+												</td>
+												<td class="text">
+													 “Act” means any Act,its amendment, modiﬁcation orre-enactment of the same, or any other succeeding enactment for the time being in force as applicable to Services oﬀered by the Company for time being in force in Myanmar.
+												</td>
+											</tr>
+										</table>
+									</td>
+								</tr>
+							</table>
+						</div>
+						<!--[if (gte mso 9)|(IE)]>
+						</td><td width="50%" valign="top">
+						<![endif]-->
+						<div class="column">
+							<table width="100%">
+								<tr>
+									<td class="inner">
+										<table class="contents">
+											<tr>
+											<td width="5%" valign="top" class="text">
+													<div>1.3.</div>
+												</td>
+												<td class="text"> “Applicable Laws” shall mean and include all applicable statutes, enactments, acts of legislature ordinances, rules, by-laws, regulations, notiﬁcations, guidelines, policies, directions, directives, and orders of any governmental authority, tribunal, board, or acourt. </td>
+											</tr>
+										</table>
+									</td>
+								</tr>
+							</table>
+						</div>
+						<!--[if (gte mso 9)|(IE)]>
+						</td>
+						</tr>
+						</table>
+						<![endif]-->
+					</td>
+				</tr>
+				
+				
+				<tr>
+					<td class="two-column">
+						<!--[if (gte mso 9)|(IE)]>
+						<table width="100%">
+						<tr>
+						<td width="50%" valign="top">
+						<![endif]-->
+						<div class="column">
+							<table width="100%">
+								<tr>
+									<td class="inner">
+										<table class="contents">
+											<tr>
+											<td width="5%" valign="top" class="text">
+													<div>1.4.</div>
+												</td>
+												<td class="text">
+													“Customer” means the holder of any payment mode (Cash, Card, Mobile Wallet) who is willing to purchase services oﬀered by Merchant.
+												</td>
+											</tr>
+										</table>
+									</td>
+								</tr>
+							</table>
+						</div>
+						<!--[if (gte mso 9)|(IE)]>
+						</td><td width="50%" valign="top">
+						<![endif]-->
+						<div class="column">
+							<table width="100%">
+								<tr>
+									<td class="inner">
+										<table class="contents">
+											<tr>
+											<td width="5%" valign="top" class="text">
+													<div>1.5.</div>
+												</td>
+												<td class="text"> “Merchant” shall mean an individual or organization that accepts payment for their products/services through YouCloud and has executed this Merchant form Agreement with the Company. </td>
+											</tr>
+										</table>
+									</td>
+								</tr>
+							</table>
+						</div>
+						<!--[if (gte mso 9)|(IE)]>
+						</td>
+						</tr>
+						</table>
+						<![endif]-->
+					</td>
+				</tr>
+				
+				
+				<tr>
+					<td class="two-column">
+						<!--[if (gte mso 9)|(IE)]>
+						<table width="100%">
+						<tr>
+						<td width="50%" valign="top">
+						<![endif]-->
+						<div class="column">
+							<table width="100%">
+								<tr>
+								
+									<td class="inner">
+										<table class="contents">
+											<tr>
+												<td width="5%" valign="top" class="text">
+													<div>1.6.</div>
+												</td>
+												<td class="text"> “Merchant Account” refers to the account created by the Merchantonsubmission of the relevant details as requested by the Company from time to time. </td>
+											</tr>
+										</table>
+									</td>
+								</tr>
+							</table>
+						</div>
+						<!--[if (gte mso 9)|(IE)]>
+						</td><td width="50%" valign="top">
+						<![endif]-->
+						<div class="column">
+							<table width="100%">
+								<tr>
+									<td class="inner">
+										<table class="contents">
+											<tr>
+												<td width="5%" valign="top" class="text">
+													<div>1.7.</div>
+												</td>
+												<td class="text"> “YouCloud” means a payment acceptance instrument issued by the Company. </td>
+											</tr>
+										</table>
+									</td>
+								</tr>
+							</table>
+						</div>
+						<!--[if (gte mso 9)|(IE)]>
+						</td>
+						</tr>
+						</table>
+						<![endif]-->
+					</td>
+				</tr>
+				
+				
+				<tr>
+					<td class="two-column">
+						<!--[if (gte mso 9)|(IE)]>
+						<table width="100%">
+						<tr>
+						<td width="50%" valign="top">
+						<![endif]-->
+						<div class="column">
+							<table width="100%">
+								<tr>
+									<td class="inner">
+										<table class="contents">
+											<tr>
+											<td width="5%" valign="top" class="text">
+													<div>1.8.</div>
+												</td>
+												<td class="text"> “Central Bank of Myanmar” shall mean the Central Bank. </td>
+											</tr>
+										</table>
+									</td>
+								</tr>
+							</table>
+						</div>
+						<!--[if (gte mso 9)|(IE)]>
+						</td><td width="50%" valign="top">
+						<![endif]-->
+						<div class="column">
+							<table width="100%">
+								<tr>
+									<td class="inner">
+										<table class="contents">
+											<tr>
+											<td width="5%" valign="top" class="text">
+													<div>1.9.</div>
+												</td>
+												<td class="text"> "Central Bank Regulations” means the Act and regulations made thereunder for the Issuance and Operation of Pre-paid Instruments and any notiﬁcation instruction sorguidelines issue dandupdated by the“ Central Bank or such other competent Government Authority from time to time, in relation to the same. </td>
+											</tr>
+										</table>
+									</td>
+								</tr>
+							</table>
+						</div>
+						<!--[if (gte mso 9)|(IE)]>
+						</td>
+						</tr>
+						</table>
+						<![endif]-->
+					</td>
+				</tr>
+				
+				
+				<tr>
+					<td class="two-column">
+						<!--[if (gte mso 9)|(IE)]>
+						<table width="100%">
+						<tr>
+						<td width="50%" valign="top">
+						<![endif]-->
+						<div class="column">
+							<table width="100%">
+								<tr>
+									<td class="inner">
+										<table class="contents">
+											<tr>
+											<td width="5%" valign="top" class="text">
+													<div>1.10.</div>
+												</td>
+												<td class="text"> “Services ”means the facilitation of payments to the Merchant for the products/- services availed by the Customer through YouCloud and enabling of the receipt of such payments by theMerchant. </td>
+											</tr>
+										</table>
+									</td>
+								</tr>
+							</table>
+						</div>
+						<!--[if (gte mso 9)|(IE)]>
+						</td><td width="50%" valign="top">
+						<![endif]-->
+						<div class="column">
+							<table width="100%">
+								<tr>
+									<td class="inner">
+										<table class="contents">
+											<tr>
+											<td width="5%" valign="top" class="text">
+													<div>1.11.</div>
+												</td>
+												<td class="text"> “Site”shall mean “www.youcloudglobal.com” and such othe rwebsite sand mobile application sasmay bedeveloped by YouCloud from time to time. </td>
+											</tr>
+										</table>
+									</td>
+								</tr>
+							</table>
+						</div>
+						<!--[if (gte mso 9)|(IE)]>
+						</td>
+						</tr>
+						</table>
+						<![endif]-->
+					</td>
+				</tr>
+				
+				
+				
+				<tr>
+					<td class="two-column">
+						<!--[if (gte mso 9)|(IE)]>
+						<table width="100%">
+						<tr>
+						<td width="50%" valign="top">
+						<![endif]-->
+						<div class="column">
+							<table width="100%">
+								<tr>
+									<td class="inner">
+										<table class="contents">
+											<tr>
+											<td width="5%" valign="top" class="text">
+													<div>1.12.</div>
+												</td>
+												<td class="text"> “Term sand Condition sofService”or“ T&amp;Cs” referto the seterm sand conditions which are available at the Site for the use of the Services. </td>
+											</tr>
+										</table>
+									</td>
+								</tr>
+							</table>
+						</div>
+						<!--[if (gte mso 9)|(IE)]>
+						</td><td width="50%" valign="top">
+						<![endif]-->
+						<div class="column">
+							<table width="100%">
+								<tr>
+									<td class="inner">
+										<table class="contents">
+											<tr>
+											<td width="5%" valign="top" class="text">
+													<div>1.13.</div>
+												</td>
+												<td class="text">
+													“Transaction” shall mean every payment request/order placed by theCustomerand accepted by Merchant using YouCloud.
+												</td>
+											</tr>
+										</table>
+									</td>
+								</tr>
+							</table>
+						</div>
+						<!--[if (gte mso 9)|(IE)]>
+						</td>
+						</tr>
+						</table>
+						<![endif]-->
+					</td>
+				</tr>
+				
+				
+				
+				
+				<tr>
+					<td class="two-column">
+						<!--[if (gte mso 9)|(IE)]>
+						<table width="100%">
+						<tr>
+						<td width="50%" valign="top">
+						<![endif]-->
+						<div class="column">
+							<table width="100%">
+								<tr>
+									<td class="inner">
+										<table class="contents">
+											<tr>
+											<td width="5%" valign="top" class="text">
+													<div>1.14.</div>
+												</td>
+												<td class="text">
+													“We”, “Our” or “Us” refers to YouCloud, as the case may be.
+												</td>
+											</tr>
+										</table>
+									</td>
+								</tr>
+							</table>
+						</div>
+						<!--[if (gte mso 9)|(IE)]>
+						</td><td width="50%" valign="top">
+						<![endif]-->
+						<div class="column">
+							<table width="100%">
+								<tr>
+									<td class="inner">
+										<table class="contents">
+											<tr>
+											<td width="5%" valign="top" class="text">
+													<div>1.15.</div>
+												</td>
+												<td class="text">
+													“You”, “Your”, or “Yourself” shall mean reference to Merchant or his/herrepresentative.
+												</td>
+											</tr>
+										</table>
+									</td>
+								</tr>
+							</table>
+						</div>
+						<!--[if (gte mso 9)|(IE)]>
+						</td>
+						</tr>
+						</table>
+						<![endif]-->
+					</td>
+				</tr>
+				
+				
+				
+				<tr>
+					<td class="two-column">
+						<!--[if (gte mso 9)|(IE)]>
+						<table width="100%">
+						<tr>
+						<td width="50%" valign="top">
+						<![endif]-->
+						<div class="column">
+							<table width="100%">
+								<tr>
+									<td class="inner">
+										<table class="contents">
+											<tr>
+											<td width="5%" valign="top" class="text">
+													<div>2</div>
+												</td>
+												<td class="text">
+													<strong>Interpretation</strong>
+												</td>
+											</tr>
+										</table>
+									</td>
+								</tr>
+							</table>
+						</div>
+						<!--[if (gte mso 9)|(IE)]>
+						</td><td width="50%" valign="top">
+						<![endif]-->
+						<div class="column">
+							<table width="100%">
+								<tr>
+									<td class="inner">
+										<table class="contents">
+											<tr>
+												<td class="text">
+													
+												</td>
+											</tr>
+										</table>
+									</td>
+								</tr>
+							</table>
+						</div>
+						<!--[if (gte mso 9)|(IE)]>
+						</td>
+						</tr>
+						</table>
+						<![endif]-->
+					</td>
+				</tr>
+				
+				
+				<tr>
+					<td class="two-column">
+						<!--[if (gte mso 9)|(IE)]>
+						<table width="100%">
+						<tr>
+						<td width="50%" valign="top">
+						<![endif]-->
+						<div class="column">
+							<table width="100%">
+								<tr>
+									<td class="inner">
+										<table class="contents">
+											<tr>
+											<td width="5%" valign="top" class="text">
+													<div>2.1.</div>
+												</td>
+												<td class="text">
+													Any reference to the singular includes a reference to the plural and vice versa, unless explicitly provided for otherwise; and any reference to the masculine includes a reference to the feminine and viceversa.
+												</td>
+											</tr>
+										</table>
+									</td>
+								</tr>
+							</table>
+						</div>
+						<!--[if (gte mso 9)|(IE)]>
+						</td><td width="50%" valign="top">
+						<![endif]-->
+						<div class="column">
+							<table width="100%">
+								<tr>
+									<td class="inner">
+										<table class="contents">
+											<tr>
+											<td width="5%" valign="top" class="text">
+													<div>2.2.</div>
+												</td>
+												<td class="text">
+													Heading sand caption sare used for convenience only and will not aﬀect the interpretation of these T&Cs.
+												</td>
+											</tr>
+										</table>
+									</td>
+								</tr>
+							</table>
+						</div>
+						<!--[if (gte mso 9)|(IE)]>
+						</td>
+						</tr>
+						</table>
+						<![endif]-->
+					</td>
+				</tr>
+				
+				
+				
+				<tr>
+					<td class="two-column">
+						<!--[if (gte mso 9)|(IE)]>
+						<table width="100%">
+						<tr>
+						<td width="50%" valign="top">
+						<![endif]-->
+						<div class="column">
+							<table width="100%">
+								<tr>
+									<td class="inner">
+										<table class="contents">
+											<tr>
+											<td width="5%" valign="top" class="text">
+													<div>2.3.</div>
+												</td>
+												<td class="text">
+													Any reference to a natural person will, unless repugnant to the context, includehisheirs, executors, and permitted assignees.Similarly, any reference to ajuristic person such as FTMand/or YouCloud will, unless repugnantto the context, include it saﬃliates, successors, and permitted assignees.
+												</td>
+											</tr>
+										</table>
+									</td>
+								</tr>
+							</table>
+						</div>
+						<!--[if (gte mso 9)|(IE)]>
+						</td><td width="50%" valign="top">
+						<![endif]-->
+						<div class="column">
+							<table width="100%">
+								<tr>
+									<td class="inner">
+										<table class="contents">
+											<tr>
+												<td class="text">
+													
+												</td>
+											</tr>
+										</table>
+									</td>
+								</tr>
+							</table>
+						</div>
+						<!--[if (gte mso 9)|(IE)]>
+						</td>
+						</tr>
+						</table>
+						<![endif]-->
+					</td>
+				</tr>
+				
+				
+							
+				<tr>
+					<td class="two-column">
+						<!--[if (gte mso 9)|(IE)]>
+						<table width="100%">
+						<tr>
+						<td width="50%" valign="top">
+						<![endif]-->
+						<div class="column">
+							<table width="100%">
+								<tr>
+									<td class="inner">
+										<table class="contents">
+											<tr>
+											<td width="5%" valign="top" class="text">
+													<div>3</div>
+												</td>
+												<td class="text">
+													<strong>Eligibility</strong>
+												</td>
+											</tr>
+										</table>
+									</td>
+								</tr>
+							</table>
+						</div>
+						<!--[if (gte mso 9)|(IE)]>
+						</td><td width="50%" valign="top">
+						<![endif]-->
+						<div class="column">
+							<table width="100%">
+								<tr>
+									<td class="inner">
+										<table class="contents">
+											<tr>
+												<td class="text">
+												
+												</td>
+											</tr>
+										</table>
+									</td>
+								</tr>
+							</table>
+						</div>
+						<!--[if (gte mso 9)|(IE)]>
+						</td>
+						</tr>
+						</table>
+						<![endif]-->
+					</td>
+				</tr>
+				
+				<tr>
+					<td class="two-column">
+						<!--[if (gte mso 9)|(IE)]>
+						<table width="100%">
+						<tr>
+						<td width="50%" valign="top">
+						<![endif]-->
+						<div class="column">
+							<table width="100%">
+								<tr>
+									<td class="inner">
+										<table class="contents">
+											<tr>
+											<td width="5%" valign="top" class="text">
+													<div>3.1.</div>
+												</td>
+												<td class="text">
+													You will not beeligible to be registeredasa Merchant unless:
+												</td>
+											</tr>
+										</table>
+									</td>
+								</tr>
+							</table>
+						</div>
+						<!--[if (gte mso 9)|(IE)]>
+						</td><td width="50%" valign="top">
+						<![endif]-->
+						<div class="column">
+							<table width="100%">
+								<tr>
+									<td class="inner">
+										<table class="contents">
+											<tr>
+											<td width="5%" valign="top" class="text">
+													<div>3.2.1.</div>
+												</td>
+												<td class="text">
+													You have attained atleast 18(eighteen) year so fage;
+												</td>
+											</tr>
+										</table>
+									</td>
+								</tr>
+							</table>
+						</div>
+						<!--[if (gte mso 9)|(IE)]>
+						</td>
+						</tr>
+						</table>
+						<![endif]-->
+					</td>
+				</tr>
+				
+				
+				<tr>
+					<td class="two-column">
+						<!--[if (gte mso 9)|(IE)]>
+						<table width="100%">
+						<tr>
+						<td width="50%" valign="top">
+						<![endif]-->
+						<div class="column">
+							<table width="100%">
+								<tr>
+									<td class="inner">
+										<table class="contents">
+											<tr>
+											<td width="5%" valign="top" class="text">
+													<div>3.1.2.</div>
+												</td>
+												<td class="text">
+													You can lawfully enter into and form contracts under Applicable Laws and haveallrequisite right, power, and authority to perform Your obligations as a Merchant;
+												</td>
+											</tr>
+										</table>
+									</td>
+								</tr>
+							</table>
+						</div>
+						<!--[if (gte mso 9)|(IE)]>
+						</td><td width="50%" valign="top">
+						<![endif]-->
+						<div class="column">
+							<table width="100%">
+								<tr>
+									<td class="inner">
+										<table class="contents">
+											<tr>
+											<td width="5%" valign="top" class="text">
+													<div>3.1.3.</div>
+												</td>
+												<td class="text">
+													You do not provide any of the good sand services listed in Schedule I, which are banned under Applicable Laws for time being force (“Banned Goods/Services”).
+												</td>
+											</tr>
+										</table>
+									</td>
+								</tr>
+							</table>
+						</div>
+						<!--[if (gte mso 9)|(IE)]>
+						</td>
+						</tr>
+						</table>
+						<![endif]-->
+					</td>
+				</tr>
+				
+				
+				<tr>
+					<td class="two-column">
+						<!--[if (gte mso 9)|(IE)]>
+						<table width="100%">
+						<tr>
+						<td width="50%" valign="top">
+						<![endif]-->
+						<div class="column">
+							<table width="100%">
+								<tr>
+									<td class="inner">
+										<table class="contents">
+											<tr>
+											<td width="5%" valign="top" class="text">
+													<div>3.1.4.</div>
+												</td>
+												<td class="text">
+													You provide goods and services within Myanmar; and
+												</td>
+											</tr>
+										</table>
+									</td>
+								</tr>
+							</table>
+						</div>
+						<!--[if (gte mso 9)|(IE)]>
+						</td><td width="50%" valign="top">
+						<![endif]-->
+						<div class="column">
+							<table width="100%">
+								<tr>
+									<td class="inner">
+										<table class="contents">
+											<tr>
+											<td width="5%" valign="top" class="text">
+													<div>3.1.5.</div>
+												</td>
+												<td class="text">
+													You receive payments in USD;
+												</td>
+											</tr>
+										</table>
+									</td>
+								</tr>
+							</table>
+						</div>
+						<!--[if (gte mso 9)|(IE)]>
+						</td>
+						</tr>
+						</table>
+						<![endif]-->
+					</td>
+				</tr>
+				
+				
+				<tr>
+					<td class="two-column">
+						<!--[if (gte mso 9)|(IE)]>
+						<table width="100%">
+						<tr>
+						<td width="50%" valign="top">
+						<![endif]-->
+						<div class="column">
+							<table width="100%">
+								<tr>
+									<td class="inner">
+										<table class="contents">
+											<tr>
+											<td width="5%" valign="top" class="text">
+													<div>3.2.</div>
+												</td>
+												<td class="text">
+													You may apply or continue to be a Merchant only as long as You satisfy the criteri aprovided in 3.1.1 to 3.1.4
+												</td>
+											</tr>
+										</table>
+									</td>
+								</tr>
+							</table>
+						</div>
+						<!--[if (gte mso 9)|(IE)]>
+						</td><td width="50%" valign="top">
+						<![endif]-->
+						<div class="column">
+							<table width="100%">
+								<tr>
+									<td class="inner">
+										<table class="contents">
+											<tr>
+											<td width="5%" valign="top" class="text">
+													<div>3.3.</div>
+												</td>
+												<td class="text">
+													Wereserve the right to terminate the Merchant Accountat any time if We have reason to believe that a Merchant Account is being used by a person who is not eligible.
+												</td>
+											</tr>
+										</table>
+									</td>
+								</tr>
+							</table>
+						</div>
+						<!--[if (gte mso 9)|(IE)]>
+						</td>
+						</tr>
+						</table>
+						<![endif]-->
+					</td>
+				</tr>
+				
+				
+				<tr>
+					<td class="two-column">
+						<!--[if (gte mso 9)|(IE)]>
+						<table width="100%">
+						<tr>
+						<td width="50%" valign="top">
+						<![endif]-->
+						<div class="column">
+							<table width="100%">
+								<tr>
+									<td class="inner">
+										<table class="contents">
+											<tr>
+											<td width="5%" valign="top" class="text">
+													<div>4</div>
+												</td>
+												<td class="text">
+													<strong>Registration as Merchant</strong>
+												</td>
+											</tr>
+										</table>
+									</td>
+								</tr>
+							</table>
+						</div>
+						<!--[if (gte mso 9)|(IE)]>
+						</td><td width="50%" valign="top">
+						<![endif]-->
+						<div class="column">
+							<table width="100%">
+								<tr>
+									<td class="inner">
+										<table class="contents">
+											<tr>
+												<td class="text">
+												
+												</td>
+											</tr>
+										</table>
+									</td>
+								</tr>
+							</table>
+						</div>
+						<!--[if (gte mso 9)|(IE)]>
+						</td>
+						</tr>
+						</table>
+						<![endif]-->
+					</td>
+				</tr>
+				
+				
+				<tr>
+					<td class="two-column">
+						<!--[if (gte mso 9)|(IE)]>
+						<table width="100%">
+						<tr>
+						<td width="50%" valign="top">
+						<![endif]-->
+						<div class="column">
+							<table width="100%">
+								<tr>
+									<td class="inner">
+										<table class="contents">
+											<tr>
+											<td width="5%" valign="top" class="text">
+													<div>4.1.</div>
+												</td>
+												<td class="text">
+													To register as a Merchant, you must completely ﬁll the form and provide all the requisitedetails (“RegistrationData”).
+												</td>
+											</tr>
+										</table>
+									</td>
+								</tr>
+							</table>
+						</div>
+						<!--[if (gte mso 9)|(IE)]>
+						</td><td width="50%" valign="top">
+						<![endif]-->
+						<div class="column">
+							<table width="100%">
+								<tr>
+									<td class="inner">
+										<table class="contents">
+											<tr>
+											<td width="5%" valign="top" class="text">
+													<div>4.2.</div>
+												</td>
+												<td class="text">
+													The Registration Data provided by Youmust be accurate, correct, current andtrue. We shall bear no liability for false, old or incorrect Registration Data provided by You. Further, Youshall indemnify Us against all damages, liabilities, costs, and expenses that may be suﬀered or incurred by Usasaconsequence of inaccu rate in format ionprovided to Us by You.
+												</td>
+											</tr>
+										</table>
+									</td>
+								</tr>
+							</table>
+						</div>
+						<!--[if (gte mso 9)|(IE)]>
+						</td>
+						</tr>
+						</table>
+						<![endif]-->
+					</td>
+				</tr>
+				
+				
+				
+				<tr>
+					<td class="two-column">
+						<!--[if (gte mso 9)|(IE)]>
+						<table width="100%">
+						<tr>
+						<td width="50%" valign="top">
+						<![endif]-->
+						<div class="column">
+							<table width="100%">
+								<tr>
+									<td class="inner">
+										<table class="contents">
+											<tr>
+											<td width="5%" valign="top" class="text">
+													<div>4.3.</div>
+												</td>
+												<td class="text">
+													You shall be solely responsible for maintaining the conﬁdentiality of Your ID and Password, and Youshall be responsible for all activities that occur under Your ID and Password. We shall not be liable for any claims, damages, liabilities that may be suﬀered by Youas a consequence of unauthorized use of Youraccount
+												</td>
+											</tr>
+										</table>
+									</td>
+								</tr>
+							</table>
+						</div>
+						<!--[if (gte mso 9)|(IE)]>
+						</td><td width="50%" valign="top">
+						<![endif]-->
+						<div class="column">
+							<table width="100%">
+								<tr>
+									<td class="inner">
+										<table class="contents">
+											<tr>
+											<td width="5%" valign="top" class="text">
+													<div>4.4.</div>
+												</td>
+												<td class="text">
+													You here by expressly consent to receive communications from Us through Your registered phone number and/or e-mail ID.
+												</td>
+											</tr>
+										</table>
+									</td>
+								</tr>
+							</table>
+						</div>
+						<!--[if (gte mso 9)|(IE)]>
+						</td>
+						</tr>
+						</table>
+						<![endif]-->
+					</td>
+				</tr>
+				
+				
+				<tr>
+					<td class="two-column">
+						<!--[if (gte mso 9)|(IE)]>
+						<table width="100%">
+						<tr>
+						<td width="50%" valign="top">
+						<![endif]-->
+						<div class="column">
+							<table width="100%">
+								<tr>
+									<td class="inner">
+										<table class="contents">
+											<tr>
+											<td width="5%" valign="top" class="text">
+													<div>4.5.</div>
+												</td>
+												<td class="text">
+													By registering fora Merchant Account, You agreeto:
+												</td>
+											</tr>
+										</table>
+									</td>
+								</tr>
+							</table>
+						</div>
+						<!--[if (gte mso 9)|(IE)]>
+						</td><td width="50%" valign="top">
+						<![endif]-->
+						<div class="column">
+							<table width="100%">
+								<tr>
+									<td class="inner">
+										<table class="contents">
+											<tr><td width="5%" valign="top" class="text">
+													<div>4.4.1.</div>
+												</td>
+												<td class="text">
+													receive communication, queries and documents from Us for the purposes of this Merchant Agreement;
+												</td>
+											</tr>
+										</table>
+									</td>
+								</tr>
+							</table>
+						</div>
+						<!--[if (gte mso 9)|(IE)]>
+						</td>
+						</tr>
+						</table>
+						<![endif]-->
+					</td>
+				</tr>
+				
+				
+				
+				<tr>
+					<td class="two-column">
+						<!--[if (gte mso 9)|(IE)]>
+						<table width="100%">
+						<tr>
+						<td width="50%" valign="top">
+						<![endif]-->
+						<div class="column">
+							<table width="100%">
+								<tr>
+									<td class="inner">
+										<table class="contents">
+											<tr>
+											<td width="5%" valign="top" class="text">
+													<div>4.4.2.</div>
+												</td>
+												<td class="text">
+													provide information that We have a legal duty to request from a Merchant on account of the Know Your Customer norms (“KYC Norms”) prescribed under “Central Bank Regulations; and
+												</td>
+											</tr>
+										</table>
+									</td>
+								</tr>
+							</table>
+						</div>
+						<!--[if (gte mso 9)|(IE)]>
+						</td><td width="50%" valign="top">
+						<![endif]-->
+						<div class="column">
+							<table width="100%">
+								<tr>
+									<td class="inner">
+										<table class="contents">
+											<tr>
+											<td width="5%" valign="top" class="text">
+													<div>4.4.3.</div>
+												</td>
+												<td class="text">
+													undertake due diligence and update Yourself on “Central Bank Regulations and other Applicable Laws that may have implicationson Your Liability as 	a Merchant.
+												</td>
+											</tr>
+										</table>
+									</td>
+								</tr>
+							</table>
+						</div>
+						<!--[if (gte mso 9)|(IE)]>
+						</td>
+						</tr>
+						</table>
+						<![endif]-->
+					</td>
+				</tr>
+				
+				
+				<tr>
+					<td class="two-column">
+						<!--[if (gte mso 9)|(IE)]>
+						<table width="100%">
+						<tr>
+						<td width="50%" valign="top">
+						<![endif]-->
+						<div class="column">
+							<table width="100%">
+								<tr>
+									<td class="inner">
+										<table class="contents">
+											<tr>
+											<td width="5%" valign="top" class="text">
+													<div>4.6.</div>
+												</td>
+												<td class="text">
+													Upon execution of the Merchant Agreement, You will become a Merchant and will be entitled to Services subject to theseT&Cs of the Merchant Agreement.
+												</td>
+											</tr>
+										</table>
+									</td>
+								</tr>
+							</table>
+						</div>
+						<!--[if (gte mso 9)|(IE)]>
+						</td><td width="50%" valign="top">
+						<![endif]-->
+						<div class="column">
+							<table width="100%">
+								<tr>
+									<td class="inner">
+										<table class="contents">
+											<tr>
+											<td width="5%" valign="top" class="text">
+													<div>4.7.</div>
+												</td>
+												<td class="text">
+													In the eventof any in consistency or conﬂict between these T&Cs and the provisions of Merchant Agreement,the provisionsof the Merchant Agreement will prevail to thee xtentof the inconsistency orconﬂict.
+												</td>
+											</tr>
+										</table>
+									</td>
+								</tr>
+							</table>
+						</div>
+						<!--[if (gte mso 9)|(IE)]>
+						</td>
+						</tr>
+						</table>
+						<![endif]-->
+					</td>
+				</tr>
+				
+				
+				
+				<tr>
+					<td class="two-column">
+						<!--[if (gte mso 9)|(IE)]>
+						<table width="100%">
+						<tr>
+						<td width="50%" valign="top">
+						<![endif]-->
+						<div class="column">
+							<table width="100%">
+								<tr>
+									<td class="inner">
+										<table class="contents">
+											<tr>
+											<td width="5%" valign="top" class="text">
+													<div>5</div>
+												</td>
+												<td class="text">
+													<strong>Use ofSite</strong>
+												</td>
+											</tr>
+										</table>
+									</td>
+								</tr>
+							</table>
+						</div>
+						<!--[if (gte mso 9)|(IE)]>
+						</td><td width="50%" valign="top">
+						<![endif]-->
+						<div class="column">
+							<table width="100%">
+								<tr>
+									<td class="inner">
+										<table class="contents">
+											<tr>
+											<td width="5%" valign="top" class="text">
+												
+												</td>
+												<td class="text">
+												
+												</td>
+											</tr>
+										</table>
+									</td>
+								</tr>
+							</table>
+						</div>
+						<!--[if (gte mso 9)|(IE)]>
+						</td>
+						</tr>
+						</table>
+						<![endif]-->
+					</td>
+				</tr>
+				
+				
+				
+				
+				<tr>
+					<td class="two-column">
+						<!--[if (gte mso 9)|(IE)]>
+						<table width="100%">
+						<tr>
+						<td width="50%" valign="top">
+						<![endif]-->
+						<div class="column">
+							<table width="100%">
+								<tr>
+									<td class="inner">
+										<table class="contents">
+											<tr>
+											<td width="5%" valign="top" class="text">
+													<div>5.1.</div>
+												</td>
+												<td class="text">
+													The Merchant agrees and understands that YouCloud Site provides certain Services to its Customers and registered users and persons browsing/visiting the Site. All items advertised/listed and the contents therein are advertised and may be listed by registered users and may be third-party user generated contents. YouCloud has no control over such the third partyuser-generatedcontents
+												</td>
+											</tr>
+										</table>
+									</td>
+								</tr>
+							</table>
+						</div>
+						<!--[if (gte mso 9)|(IE)]>
+						</td><td width="50%" valign="top">
+						<![endif]-->
+						<div class="column">
+							<table width="100%">
+								<tr>
+									<td class="inner">
+										<table class="contents">
+											<tr>
+											<td width="5%" valign="top" class="text">
+													<div>5.2.</div>
+												</td>
+												<td class="text">
+													The Merchant shall notattempttoga in unauthorized access to any portionor featureoftheSite,othersystems,network sconnected to the Site, server,computer,network,or the services oﬀered on or through the Site by hacking, password ‘mining’, or any other illegitimatemeans.
+												</td>
+											</tr>
+										</table>
+									</td>
+								</tr>
+							</table>
+						</div>
+						<!--[if (gte mso 9)|(IE)]>
+						</td>
+						</tr>
+						</table>
+						<![endif]-->
+					</td>
+				</tr>
+				
+				
+					<tr>
+					    <td class="two-column">
+						<!--[if (gte mso 9)|(IE)]>
+						<table width="100%">
+						<tr>
+						<td width="50%" valign="top">
+						<![endif]-->
+						<div class="column">
+							<table width="100%">
+								<tr>
+									<td class="inner">
+										<table class="contents">
+											<tr>
+											<td width="5%" valign="top" class="text">
+													<div>5.3.</div>
+												</td>
+												<td class="text">
+													The Merchant shall not probe, scan, or test the vulnerability of the Site or any network connected to the Site or breach the security, authentication measureson the Siteor any network connected to the Site. The Merchant may not reverse look-up, trace or seek to trace information on any othe rusero for visitor to Site (including any accounton the Site that is not owned by the Merchant) or to its source; or exploit the Site, any service, information made available, or oﬀered by or through the Site in any way, where the purpose is to reveal anyinformation(including but not limited to personal identiﬁcation or information other than its own information) provided by theSite.
+												</td>
+											</tr>
+										</table>
+									</td>
+								</tr>
+							</table>
+						</div>
+						<!--[if (gte mso 9)|(IE)]>
+						</td><td width="50%" valign="top">
+						<![endif]-->
+						<div class="column">
+							<table width="100%">
+								<tr>
+									<td class="inner">
+										<table class="contents">
+											<tr>
+											<td width="5%" valign="top" class="text">
+													<div>5.4.</div>
+												</td>
+												<td class="text">
+													The Merchant shall not make any negative, denigrating, or defamatory statement(s)/comment(s) about YouCloud, the brand name or domain name used by YouCloud, or otherwise engage in any conduct or action that might tarnish the image or reputation of YouCloud or otherwise tarnish or dilute any trademark, service marks, trade name and/or goodwill associated with such trade, service marks or trade name as may be ownedorusedbyYouCloud.The Merchant agree sthat the Merchant will not take any action that imposes an unreasonable or disproportionately large load on the infrastructure of the Site or YouCloud’s systems, networks, or any systems or networks connected to YouCloud (ifany).
+												</td>
+											</tr>
+										</table>
+									</td>
+								</tr>
+							</table>
+						</div>
+						<!--[if (gte mso 9)|(IE)]>
+						</td>
+						</tr>
+						</table>
+						<![endif]-->
+					</td>
+				</tr>
+				
+				
+				
+				<tr>
+					 <td class="two-column">
+						<!--[if (gte mso 9)|(IE)]>
+						<table width="100%">
+						<tr>
+						<td width="50%" valign="top">
+						<![endif]-->
+						<div class="column">
+							<table width="100%">
+								<tr>
+									<td class="inner">
+										<table class="contents">
+											<tr>
+											<td width="5%" valign="top" class="text">
+													<div>5.5.</div>
+												</td>
+												<td class="text">
+													The Merchant agrees not to use any device, software or routine to interfere or attempt to inter fere with the proper working of the Site, any transaction be ingconductedon the Site or any other person’ suseof the Site.
+												</td>
+											</tr>
+										</table>
+									</td>
+								</tr>
+							</table>
+						</div>
+						<!--[if (gte mso 9)|(IE)]>
+						</td><td width="50%" valign="top">
+						<![endif]-->
+						<div class="column">
+							<table width="100%">
+								<tr>
+									<td class="inner">
+										<table class="contents">
+											<tr>
+											<td width="5%" valign="top" class="text">
+													<div>5.6.</div>
+												</td>
+												<td class="text">
+													The Merchant may not forge headers or otherwise manipulate identiﬁers in orderto disguise the origin of any message,transmit tal the Merchant sends to YouCloudon or through the Site, or any service oﬀered on or through the Site. The Merchant shall not pre tend that it isoritre presents someone else or impersonate any other individualorentity.
+												</td>
+											</tr>
+										</table>
+									</td>
+								</tr>
+							</table>
+						</div>
+						<!--[if (gte mso 9)|(IE)]>
+						</td>
+						</tr>
+						</table>
+						<![endif]-->
+					</td>
+				</tr>
+				
+				
+				
+				<tr>
+					    <td class="two-column">
+						<!--[if (gte mso 9)|(IE)]>
+						<table width="100%">
+						<tr>
+						<td width="50%" valign="top">
+						<![endif]-->
+						<div class="column">
+							<table width="100%">
+								<tr>
+									<td class="inner">
+										<table class="contents">
+											<tr>
+											<td width="5%" valign="top" class="text">
+													<div>5.7.</div>
+												</td>
+												<td class="text">
+													The Merchant mayn otuse the Siteor any content for any purpose that isunlawful orprohibited by the T&C sortosolicit the performance of any illegalactivity or other activity which infringes the rights of YouCloud or others.
+												</td>
+											</tr>
+										</table>
+									</td>
+								</tr>
+							</table>
+						</div>
+						<!--[if (gte mso 9)|(IE)]>
+						</td><td width="50%" valign="top">
+						<![endif]-->
+						<div class="column">
+							<table width="100%">
+								<tr>
+									<td class="inner">
+										<table class="contents">
+											<tr>
+											<td width="5%" valign="top" class="text">
+													<div>5.8.</div>
+												</td>
+												<td class="text">
+														The Merchant agrees that, from time to time, it shall be responsible for providing information relating to the Services proposed to be sold by the Merchant. In thisconnection, the Merchant undertakes that all such information shall be accurate in all respects. The Merchant shall notex aggerateorover-emphasize the attribute sof the Services.
+												</td>
+											</tr>
+										</table>
+									</td>
+								</tr>
+							</table>
+						</div>
+						<!--[if (gte mso 9)|(IE)]>
+						</td>
+						</tr>
+						</table>
+						<![endif]-->
+					</td>
+				</tr>
+				
+				
+				
+			<tr>
+					<td class="two-column">
+						<!--[if (gte mso 9)|(IE)]>
+						<table width="100%">
+						<tr>
+						<td width="50%" valign="top">
+						<![endif]-->
+						<div class="column">
+							<table width="100%">
+								<tr>
+									<td class="inner">
+										<table class="contents">
+											<tr>
+											<td width="5%" valign="top" class="text">
+													<div>5.9.</div>
+												</td>
+												<td class="text">
+														The Merchant shall not transmit any chain letters or unsolicited commercial or junke-mail too the rusersvia the Site. It shall be aviolation of the Agreement and the T&Cs to use any information obtained from the Site in order to harass, abuse, or harm others or contact, advertise, and sell too rsolicit from persons other than those who have chosen to buy from the Merchant. Notwithstanding this right, the MERCHANT REMAINS SOLELY RESPONSI- BLE FOR THE CONTENT OF THE MATERIAL THE MERCHANT POSTS ON THE SITE AND IN MERCHANT’S PRIVATE MESSAGES. Please be advised that such content posted does not reﬂect YouCloud’s views. In no event shall YouCloud assume or have any responsibility or liability for any content postedon the Site orclaims, damages, or losses resulting from itsuse and/or appearance of it on the Site. The Merchant hereby represents and warrants that the Merchanth as necessary rights to all the content the Merchant provides andall in formation it contains and that such content shall not infringe any proprietary or other rights of third part iesor contain any misleading, libelous, tortious, or otherwise unlawful information.
+												</td>
+											</tr>
+										</table>
+									</td>
+								</tr>
+							</table>
+						</div>
+						<!--[if (gte mso 9)|(IE)]>
+						</td><td width="50%" valign="top">
+						<![endif]-->
+						<div class="column">
+							<table width="100%">
+								<tr>
+									<td class="inner">
+										<table class="contents">
+											<tr>
+											<td width="5%" valign="top" class="text">
+													<div>5.10.</div>
+												</td>
+												<td class="text">
+														Merchant hereby agrees that its correspondence or business dealings withorparticipation in the promotion of advertisers oﬄine or through the Site (including payment and delivery of related services, any other terms, conditions, warranties, or representations associated with such dealings) are solely between the Merchant and such advertisers. YouCloud shall not be responsible or liable for any loss or damage of any sort incurred as a result of such dealings or the presence of such advertisers on the Site.
+												</td>
+											</tr>
+										</table>
+									</td>
+								</tr>
+							</table>
+						</div>
+						<!--[if (gte mso 9)|(IE)]>
+						</td>
+						</tr>
+						</table>
+						<![endif]-->
+					</td>
+				</tr>	
+				
+				
+				
+				
+				
+				<tr>
+					<td class="two-column">
+						<!--[if (gte mso 9)|(IE)]>
+						<table width="100%">
+						<tr>
+						<td width="50%" valign="top">
+						<![endif]-->
+						<div class="column">
+							<table width="100%">
+								<tr>
+									<td class="inner">
+										<table class="contents">
+											<tr>
+											<td width="5%" valign="top" class="text">
+													<div>5.11.</div>
+												</td>
+												<td class="text">
+														It is possible that other users (including unauthorized persons or‘hackers’)may post or transmit oﬀensive or obscene material on the Site and that the Merchant may be involuntarily exposed to such material. We do not approve of such unauthorized uses and shall not be responsible for the use of any information that the Merchant publiclydisclosesor shares with third parties on theSite.
+												</td>
+											</tr>
+										</table>
+									</td>
+								</tr>
+							</table>
+						</div>
+						<!--[if (gte mso 9)|(IE)]>
+						</td><td width="50%" valign="top">
+						<![endif]-->
+						<div class="column">
+							<table width="100%">
+								<tr>
+									<td class="inner">
+										<table class="contents">
+											<tr>
+											<td width="5%" valign="top" class="text">
+													
+												</td>
+												<td class="text">
+													
+												</td>
+											</tr>
+										</table>
+									</td>
+								</tr>
+							</table>
+						</div>
+						<!--[if (gte mso 9)|(IE)]>
+						</td>
+						</tr>
+						</table>
+						<![endif]-->
+					</td>
+				</tr>	
+				
+				
+				
+				<tr>
+					<td class="two-column">
+						<!--[if (gte mso 9)|(IE)]>
+						<table width="100%">
+						<tr>
+						<td width="50%" valign="top">
+						<![endif]-->
+						<div class="column">
+							<table width="100%">
+								<tr>
+									<td class="inner">
+										<table class="contents">
+											<tr>
+											<td width="5%" valign="top" class="text">
+													<div>6</div>
+												</td>
+												<td class="text">
+													<strong>Non-WorkingDays</strong></td>
+											</tr>
+										</table>
+									</td>
+								</tr>
+							</table>
+						</div>
+						<!--[if (gte mso 9)|(IE)]>
+						</td><td width="50%" valign="top">
+						<![endif]-->
+						<div class="column">
+							<table width="100%">
+								<tr>
+									<td class="inner">
+										<table class="contents">
+											<tr>
+											<td width="5%" valign="top" class="text">
+													
+												</td>
+												<td class="text">
+													
+												</td>
+											</tr>
+										</table>
+									</td>
+								</tr>
+							</table>
+						</div>
+						<!--[if (gte mso 9)|(IE)]>
+						</td>
+						</tr>
+						</table>
+						<![endif]-->
+					</td>
+				</tr>	
+				
+				
+				
+				
+				<tr>
+					<td class="two-column">
+						<!--[if (gte mso 9)|(IE)]>
+						<table width="100%">
+						<tr>
+						<td width="50%" valign="top">
+						<![endif]-->
+						<div class="column">
+							<table width="100%">
+								<tr>
+									<td class="inner">
+										<table class="contents">
+											<tr>
+											<td width="5%" valign="top" class="text">
+													<div>6.1.</div>
+												</td>
+												<td class="text">
+													YouCloud is reliant on third parties such as banks to deliver timely Services. Since YouCloud cannot control the actions of such third parties, YouCloud will not be responsible to render Services or process payments or refunds on the following days (“Non-WorkingDays”):
+												</td>		
+											</tr>
+										</table>
+									</td>
+								</tr>
+							</table>
+						</div>
+						<!--[if (gte mso 9)|(IE)]>
+						</td><td width="50%" valign="top">
+						<![endif]-->
+						<div class="column">
+							<table width="100%">
+								<tr>
+									<td class="inner">
+										<table class="contents">
+											<tr>
+											<td width="5%" valign="top" class="text">
+													6.1.1.
+												</td>
+												<td class="text">
+													days which are declared as holidays by the “Central Bank, or any other day which is declared a holiday by Us;anddays including Saturdays and Sundays and declared as festivals in the Country of Myanmar.
+												</td>
+											</tr>
+										</table>
+									</td>
+								</tr>
+							</table>
+						</div>
+						<!--[if (gte mso 9)|(IE)]>
+						</td>
+						</tr>
+						</table>
+						<![endif]-->
+					</td>
+				</tr>	
+				
+				
+				
+				<tr>
+					<td class="two-column">
+						<!--[if (gte mso 9)|(IE)]>
+						<table width="100%">
+						<tr>
+						<td width="50%" valign="top">
+						<![endif]-->
+						<div class="column">
+							<table width="100%">
+								<tr>
+									<td class="inner">
+										<table class="contents">
+											<tr>
+											<td width="5%" valign="top" class="text">
+													<div>7</div>
+												</td>
+												<td class="text">
+													<strong>Right to use trademarks, service marks, or logos</strong>
+												</td>		
+											</tr>
+										</table>
+									</td>
+								</tr>
+							</table>
+						</div>
+						<!--[if (gte mso 9)|(IE)]>
+						</td><td width="50%" valign="top">
+						<![endif]-->
+						<div class="column">
+							<table width="100%">
+								<tr>
+									<td class="inner">
+										<table class="contents">
+											<tr>
+											<td width="5%" valign="top" class="text">
+													7.1.
+												</td>
+												<td class="text">
+													Nothing contained in these T&Cs constitutes a license in favor of the Merchant to use trademarks, service marks or logos and/or any other marks owned by YouCloud that may be reﬂected on the Site/outlet Intellectual Property Rights (“IPR” ). Any use by Merchant of IPR will only be done with the prior written permission from Us.
+												</td>
+											</tr>
+										</table>
+									</td>
+								</tr>
+							</table>
+						</div>
+						<!--[if (gte mso 9)|(IE)]>
+						</td>
+						</tr>
+						</table>
+						<![endif]-->
+					</td>
+				</tr>	
+				
+				
+				<tr>
+					<td class="two-column">
+						<!--[if (gte mso 9)|(IE)]>
+						<table width="100%">
+						<tr>
+						<td width="50%" valign="top">
+						<![endif]-->
+						<div class="column">
+							<table width="100%">
+								<tr>
+									<td class="inner">
+										<table class="contents">
+											<tr>
+											<td width="5%" valign="top" class="text">
+													<div>7.2.</div>
+												</td>
+												<td class="text">
+													You acknowledge that Weare the sole and exclusive owner of Our respective IPR sand agree that You will not contest the ownership of the said IPRs for any reason whatsoever.
+												</td>		
+											</tr>
+										</table>
+									</td>
+								</tr>
+							</table>
+						</div>
+						<!--[if (gte mso 9)|(IE)]>
+						</td><td width="50%" valign="top">
+						<![endif]-->
+						<div class="column">
+							<table width="100%">
+								<tr>
+									<td class="inner">
+										<table class="contents">
+											<tr>
+											<td width="5%" valign="top" class="text">
+												
+												</td>
+												<td class="text">
+													
+												</td>
+											</tr>
+										</table>
+									</td>
+								</tr>
+							</table>
+						</div>
+						<!--[if (gte mso 9)|(IE)]>
+						</td>
+						</tr>
+						</table>
+						<![endif]-->
+					</td>
+				</tr>	
+				
+				
+				
+				
+				<tr>
+					<td class="two-column">
+						<!--[if (gte mso 9)|(IE)]>
+						<table width="100%">
+						<tr>
+						<td width="50%" valign="top">
+						<![endif]-->
+						<div class="column">
+							<table width="100%">
+								<tr>
+									<td class="inner">
+										<table class="contents">
+											<tr>
+											<td width="5%" valign="top" class="text">
+													<div>8</div>
+												</td>
+												<td class="text">
+													<strong>Prohibition against oﬀer of Banned Goods/Services.</strong>
+												</td>		
+											</tr>
+										</table>
+									</td>
+								</tr>
+							</table>
+						</div>
+						<!--[if (gte mso 9)|(IE)]>
+						</td><td width="50%" valign="top">
+						<![endif]-->
+						<div class="column">
+							<table width="100%">
+								<tr>
+									<td class="inner">
+										<table class="contents">
+											<tr>
+											<td width="5%" valign="top" class="text">
+													8.1.
+												</td>
+												<td class="text">
+													If We have any reason to believe that a Merchanti soﬀeringany Banned Goods/Ser- vices for sale to Customer, We reserve Our right to terminate the Agreement with immediate eﬀect.
+												</td>
+											</tr>
+										</table>
+									</td>
+								</tr>
+							</table>
+						</div>
+						<!--[if (gte mso 9)|(IE)]>
+						</td>
+						</tr>
+						</table>
+						<![endif]-->
+					</td>
+				</tr>	
+				
+				
+				
+				<tr>
+					<td class="two-column">
+						<!--[if (gte mso 9)|(IE)]>
+						<table width="100%">
+						<tr>
+						<td width="50%" valign="top">
+						<![endif]-->
+						<div class="column">
+							<table width="100%">
+								<tr>
+									<td class="inner">
+										<table class="contents">
+											<tr>
+											<td width="5%" valign="top" class="text">
+													<div>8.2.</div>
+												</td>
+												<td class="text">
+													We rely on Your representation that You do not and will not oﬀer BannedGoods/Services to the Customer
+												</td>		
+											</tr>
+										</table>
+									</td>
+								</tr>
+							</table>
+						</div>
+						<!--[if (gte mso 9)|(IE)]>
+						</td><td width="50%" valign="top">
+						<![endif]-->
+						<div class="column">
+							<table width="100%">
+								<tr>
+									<td class="inner">
+										<table class="contents">
+											<tr>
+											<td width="5%" valign="top" class="text">
+												
+												</td>
+												<td class="text">
+													
+												</td>
+											</tr>
+										</table>
+									</td>
+								</tr>
+							</table>
+						</div>
+						<!--[if (gte mso 9)|(IE)]>
+						</td>
+						</tr>
+						</table>
+						<![endif]-->
+					</td>
+				</tr>	
+				
+				
+				<tr>
+					<td class="two-column">
+						<!--[if (gte mso 9)|(IE)]>
+						<table width="100%">
+						<tr>
+						<td width="50%" valign="top">
+						<![endif]-->
+						<div class="column">
+							<table width="100%">
+								<tr>
+									<td class="inner">
+										<table class="contents">
+											<tr>
+											<td width="5%" valign="top" class="text">
+													<div>9</div>
+												</td>
+												<td class="text">
+													<strong>Charges and Settlement of Accounts</strong>
+												</td>		
+											</tr>
+										</table>
+									</td>
+								</tr>
+							</table>
+						</div>
+						<!--[if (gte mso 9)|(IE)]>
+						</td><td width="50%" valign="top">
+						<![endif]-->
+						<div class="column">
+							<table width="100%">
+								<tr>
+									<td class="inner">
+										<table class="contents">
+											<tr>
+											<td width="5%" valign="top" class="text">
+												9.1.
+												</td>
+												<td class="text">
+													The details of charges levied by YouCloud, including the transaction discountrate(“TDR”) will be as per the Merchant Agreement.
+												</td>
+											</tr>
+										</table>
+									</td>
+								</tr>
+							</table>
+						</div>
+						<!--[if (gte mso 9)|(IE)]>
+						</td>
+						</tr>
+						</table>
+						<![endif]-->
+					</td>
+				</tr>	
+				
+				
+				
+				
+				<tr>
+					<td class="two-column">
+						<!--[if (gte mso 9)|(IE)]>
+						<table width="100%">
+						<tr>
+						<td width="50%" valign="top">
+						<![endif]-->
+						<div class="column">
+							<table width="100%">
+								<tr>
+									<td class="inner">
+										<table class="contents">
+											<tr>
+											<td width="5%" valign="top" class="text">
+													<div>9.2.</div>
+												</td>
+												<td class="text">
+													By registering for or using the Services, You authorize YouCloud to make deductions from the amounts due and payable to You under the Merchant Agreement, which includes thefollowing:
+												</td>		
+											</tr>
+										</table>
+									</td>
+								</tr>
+							</table>
+						</div>
+						<!--[if (gte mso 9)|(IE)]>
+						</td><td width="50%" valign="top">
+						<![endif]-->
+						<div class="column">
+							<table width="100%">
+								<tr>
+									<td class="inner">
+										<table class="contents">
+											<tr>
+											<td width="5%" valign="top" class="text">
+												9.2.1.
+												</td>
+												<td class="text">
+													TDR
+												</td>
+											</tr>
+										</table>
+									</td>
+								</tr>
+							</table>
+						</div>
+						<!--[if (gte mso 9)|(IE)]>
+						</td>
+						</tr>
+						</table>
+						<![endif]-->
+					</td>
+				</tr>	
+				
+				
+				
+				<tr>
+					<td class="two-column">
+						<!--[if (gte mso 9)|(IE)]>
+						<table width="100%">
+						<tr>
+						<td width="50%" valign="top">
+						<![endif]-->
+						<div class="column">
+							<table width="100%">
+								<tr>
+									<td class="inner">
+										<table class="contents">
+											<tr>
+											<td width="5%" valign="top" class="text">
+													<div>9.2.</div>
+												</td>
+												<td class="text">
+													By registering for or using the Services, You authorize YouCloud to make deductions from the amounts due and payable to You under the Merchant Agreement, which includes thefollowing:
+												</td>		
+											</tr>
+										</table>
+									</td>
+								</tr>
+							</table>
+						</div>
+						<!--[if (gte mso 9)|(IE)]>
+						</td><td width="50%" valign="top">
+						<![endif]-->
+						<div class="column">
+							<table width="100%">
+								<tr>
+									<td class="inner">
+										<table class="contents">
+											<tr>
+											<td width="5%" valign="top" class="text">
+												9.2.2.
+												</td>
+												<td class="text">
+													Taxes in force as applicable for the time being
+												</td>
+											</tr>
+										</table>
+									</td>
+								</tr>
+							</table>
+						</div>
+						<!--[if (gte mso 9)|(IE)]>
+						</td>
+						</tr>
+						</table>
+						<![endif]-->
+					</td>
+				</tr>	
+				
+				
+				
+				<tr>
+					<td class="two-column">
+						<!--[if (gte mso 9)|(IE)]>
+						<table width="100%">
+						<tr>
+						<td width="50%" valign="top">
+						<![endif]-->
+						<div class="column">
+							<table width="100%">
+								<tr>
+									<td class="inner">
+										<table class="contents">
+											<tr>
+											<td width="5%" valign="top" class="text">
+													<div>9.2.3.</div>
+												</td>
+												<td class="text">
+													Refund(s), chargebacks, and any other amounts due and payable by You toUsinterms of the T&Cs and the Merchant Agreement (Deductions speciﬁed under sub-paragraph 9.2.1, 9.2.2 and 9.2.3 shall be collectively referred to as “Deductions”.)
+												</td>		
+											</tr>
+										</table>
+									</td>
+								</tr>
+							</table>
+						</div>
+						<!--[if (gte mso 9)|(IE)]>
+						</td><td width="50%" valign="top">
+						<![endif]-->
+						<div class="column">
+							<table width="100%">
+								<tr>
+									<td class="inner">
+										<table class="contents">
+											<tr>
+											<td width="5%" valign="top" class="text">
+												9.3.
+												</td>
+												<td class="text">
+													Any payments made to Youwill always be subject to applicable Deductions.
+												</td>
+											</tr>
+										</table>
+									</td>
+								</tr>
+							</table>
+						</div>
+						<!--[if (gte mso 9)|(IE)]>
+						</td>
+						</tr>
+						</table>
+						<![endif]-->
+					</td>
+				</tr>	
+				
+				
+				<tr>
+					<td class="two-column">
+						<!--[if (gte mso 9)|(IE)]>
+						<table width="100%">
+						<tr>
+						<td width="50%" valign="top">
+						<![endif]-->
+						<div class="column">
+							<table width="100%">
+								<tr>
+									<td class="inner">
+										<table class="contents">
+											<tr>
+											<td width="5%" valign="top" class="text">
+													<div>9.4.</div>
+												</td>
+												<td class="text">
+													You agree and undertake to execute all authorizations and writings, as may be required by YouCloud from time to time,to make the Deductions.
+												</td>		
+											</tr>
+										</table>
+									</td>
+								</tr>
+							</table>
+						</div>
+						<!--[if (gte mso 9)|(IE)]>
+						</td><td width="50%" valign="top">
+						<![endif]-->
+						<div class="column">
+							<table width="100%">
+								<tr>
+									<td class="inner">
+										<table class="contents">
+											<tr>
+											<td width="5%" valign="top" class="text">
+												9.5.
+												</td>
+												<td class="text">
+													You agree and acknowledge that any payment made to Youis without prejudice to any claims or rights that We may have against You, and such payments will not constitute any admission by Us as to the performance by You of Your obligations under these T&Cs and the Merchant Agreement
+												</td>
+											</tr>
+										</table>
+									</td>
+								</tr>
+							</table>
+						</div>
+						<!--[if (gte mso 9)|(IE)]>
+						</td>
+						</tr>
+						</table>
+						<![endif]-->
+					</td>
+				</tr>
+				
+				<tr>
+					<td class="two-column">
+						<!--[if (gte mso 9)|(IE)]>
+						<table width="100%">
+						<tr>
+						<td width="50%" valign="top">
+						<![endif]-->
+						<div class="column">
+							<table width="100%">
+								<tr>
+									<td class="inner">
+										<table class="contents">
+											<tr>
+											<td width="5%" valign="top" class="text">
+													<div>9.6.</div>
+												</td>
+												<td class="text">
+													Notwithstanding   anything   contained   in   these   T&Cs   and/or   the  Merchant Agreement, where YouCloud has reason to believe that any charges/debits have been fraudulently incurred (“Suspect Charge”), YouCloud will always be entitled to deduct an amount equivalent to Suspect Charge from the amount payable to You.
+												</td>		
+											</tr>
+										</table>
+									</td>
+								</tr>
+							</table>
+						</div>
+						<!--[if (gte mso 9)|(IE)]>
+						</td><td width="50%" valign="top">
+						<![endif]-->
+						<div class="column">
+							<table width="100%">
+								<tr>
+									<td class="inner">
+										<table class="contents">
+											<tr>
+											<td width="5%" valign="top" class="text">
+												9.7.
+												</td>
+												<td class="text">
+													If after due inquiry and investigation by Us, We determine that the charge/debitisa valid charge and not a Suspect Charge, YouCloud will release the withheld payment.
+												</td>
+											</tr>
+										</table>
+									</td>
+								</tr>
+							</table>
+						</div>
+						<!--[if (gte mso 9)|(IE)]>
+						</td>
+						</tr>
+						</table>
+						<![endif]-->
+					</td>
+				</tr>
+				
+				
+				<tr>
+					<td class="two-column">
+						<!--[if (gte mso 9)|(IE)]>
+						<table width="100%">
+						<tr>
+						<td width="50%" valign="top">
+						<![endif]-->
+						<div class="column">
+							<table width="100%">
+								<tr>
+									<td class="inner">
+										<table class="contents">
+											<tr>
+											<td width="5%" valign="top" class="text">
+													<div>9.8.</div>
+												</td>
+												<td class="text">
+													If Wedetermine after due inquiry and investigation that any Suspect Charge is not avalidchargeatall, YouCloud will no trelease the with held payment and will transfer the same payment transaction of the Customer inquestion.
+												</td>		
+											</tr>
+										</table>
+									</td>
+								</tr>
+							</table>
+						</div>
+						<!--[if (gte mso 9)|(IE)]>
+						</td><td width="50%" valign="top">
+						<![endif]-->
+						<div class="column">
+							<table width="100%">
+								<tr>
+									<td class="inner">
+										<table class="contents">
+											<tr>
+											<td width="5%" valign="top" class="text">
+												9.9.
+												</td>
+												<td class="text">
+													We will communicate to You if any penalty is payable by You to Us fortheSuspectCharge or any other payments withheld under the provisions of these T&Cs and the Merchant Agreement.
+												</td>
+											</tr>
+										</table>
+									</td>
+								</tr>
+							</table>
+						</div>
+						<!--[if (gte mso 9)|(IE)]>
+						</td>
+						</tr>
+						</table>
+						<![endif]-->
+					</td>
+				</tr>
+				
+				
+				<tr>
+					<td class="two-column">
+						<!--[if (gte mso 9)|(IE)]>
+						<table width="100%">
+						<tr>
+						<td width="50%" valign="top">
+						<![endif]-->
+						<div class="column">
+							<table width="100%">
+								<tr>
+									<td class="inner">
+										<table class="contents">
+											<tr>
+											<td width="8%" valign="top" class="text">
+													<div>10</div>
+												</td>
+												<td width="92%" class="text">
+													<strong>Refunds and Chargebacks</strong>
+												</td>		
+											</tr>
+										</table>
+									</td>
+								</tr>
+							</table>
+						</div>
+						<!--[if (gte mso 9)|(IE)]>
+						</td><td width="50%" valign="top">
+						<![endif]-->
+						<div class="column">
+							<table width="100%">
+								<tr>
+									<td class="inner">
+										<table class="contents">
+											<tr>
+											<td width="5%" valign="top" class="text">
+												
+												</td>
+												<td class="text">
+												
+												</td>
+											</tr>
+										</table>
+									</td>
+								</tr>
+							</table>
+						</div>
+						<!--[if (gte mso 9)|(IE)]>
+						</td>
+						</tr>
+						</table>
+						<![endif]-->
+					</td>
+				</tr>
+				
+				
+				<tr>
+					<td class="two-column">
+						<!--[if (gte mso 9)|(IE)]>
+						<table width="100%">
+						<tr>
+						<td width="50%" valign="top">
+						<![endif]-->
+						<div class="column">
+							<table width="100%">
+								<tr>
+									<td class="inner">
+										<table class="contents">
+											<tr>
+											<td width="8%" valign="top" class="text">
+													<div>10.1.</div>
+												</td>
+												<td width="92%" class="text">
+													If You receive a request from a Customer for refund or cancellation of payment (“RefundRequest”)inrelation to a Transaction, You shall promptly notify Us about such Refund Request and also in timate Usas to whether You agree to process such Refund Requestor not.
+												</td>		
+											</tr>
+										</table>
+									</td>
+								</tr>
+							</table>
+						</div>
+						<!--[if (gte mso 9)|(IE)]>
+						</td><td width="50%" valign="top">
+						<![endif]-->
+						<div class="column">
+							<table width="100%">
+								<tr>
+									<td class="inner">
+										<table class="contents">
+											<tr>
+											<td width="5%" valign="top" class="text">
+												10.2.
+												</td>
+												<td class="text">
+													If You agree to process the Refund Request, YouCloud shall deduct the amount of refund or cancelled payment (“Refund Amount”) from the amount payable to You under theMerchant Agreement and transfer the Refund Amount to  the YouCloud Wallet of the Customer in question
+
+												</td>
+											</tr>
+										</table>
+									</td>
+								</tr>
+							</table>
+						</div>
+						<!--[if (gte mso 9)|(IE)]>
+						</td>
+						</tr>
+						</table>
+						<![endif]-->
+					</td>
+				</tr>
+				
+				
+				
+				<tr>
+					<td class="two-column">
+						<!--[if (gte mso 9)|(IE)]>
+						<table width="100%">
+						<tr>
+						<td width="50%" valign="top">
+						<![endif]-->
+						<div class="column">
+							<table width="100%">
+								<tr>
+									<td class="inner">
+										<table class="contents">
+											<tr>
+											<td width="8%" valign="top" class="text">
+													<div>10.3.</div>
+												</td>
+												<td width="92%" class="text">
+													If We receive a Refund Request, We will forward the same to You. Promptly upon receipt of the Refund Request, You will notify Us as to whether You are agreeable to process the Refund Request or not. In case, Youare agreeable to it, the provision of 9.2 will apply, to the extentapplicable.
+												</td>		
+											</tr>
+										</table>
+									</td>
+								</tr>
+							</table>
+						</div>
+						<!--[if (gte mso 9)|(IE)]>
+						</td><td width="50%" valign="top">
+						<![endif]-->
+						<div class="column">
+							<table width="100%">
+								<tr>
+									<td class="inner">
+										<table class="contents">
+											<tr>
+											<td width="5%" valign="top" class="text">
+												10.4.
+												</td>
+												<td class="text">
+													In the event, You do not agree to process the Refund Request, YouCloud reserves the right to either deduct the Refund Amount from the amount payable to You and/or claim a refund from You.
+												</td>
+											</tr>
+										</table>
+									</td>
+								</tr>
+							</table>
+						</div>
+						<!--[if (gte mso 9)|(IE)]>
+						</td>
+						</tr>
+						</table>
+						<![endif]-->
+					</td>
+				</tr>
+				
+				
+				<tr>
+					<td class="two-column">
+						<!--[if (gte mso 9)|(IE)]>
+						<table width="100%">
+						<tr>
+						<td width="50%" valign="top">
+						<![endif]-->
+						<div class="column">
+							<table width="100%">
+								<tr>
+									<td class="inner">
+										<table class="contents">
+											<tr>
+											<td width="8%" valign="top" class="text">
+													<div>10.5.</div>
+												</td>
+												<td width="92%" class="text">
+													If Youand the Customer are unable to arrive at a satisfactory resolution of a problem with inaperio dof14 (fourteen) days there after, We shall been titled to makea direct credit to the disputing Customer for the disputed amount. Such a deduction from the amount payable to You and the direct credit to the disputing Customer‘s account shall notbed is puted by You inanymanner whatsoever.
+												</td>		
+											</tr>
+										</table>
+									</td>
+								</tr>
+							</table>
+						</div>
+						<!--[if (gte mso 9)|(IE)]>
+						</td><td width="50%" valign="top">
+						<![endif]-->
+						<div class="column">
+							<table width="100%">
+								<tr>
+									<td class="inner">
+										<table class="contents">
+											<tr>
+											<td width="5%" valign="top" class="text">
+												10.6.
+												</td>
+												<td class="text">
+													In the event the Customer and the Merchant arrive at a settlement within the said 14 (fourteen) day period, YouCloud shall deal with the said money in accordance with the terms of the settlement arrivedat
+												</td>
+											</tr>
+										</table>
+									</td>
+								</tr>
+							</table>
+						</div>
+						<!--[if (gte mso 9)|(IE)]>
+						</td>
+						</tr>
+						</table>
+						<![endif]-->
+					</td>
+				</tr>
+				
+				
+				<tr>
+					<td class="two-column">
+						<!--[if (gte mso 9)|(IE)]>
+						<table width="100%">
+						<tr>
+						<td width="50%" valign="top">
+						<![endif]-->
+						<div class="column">
+							<table width="100%">
+								<tr>
+									<td class="inner">
+										<table class="contents">
+											<tr>
+											<td width="8%" valign="top" class="text">
+													<div>10.7.</div>
+												</td>
+												<td width="92%" class="text">
+													In the event the Customer and the Merchant arrive at a settlement within the said 14 (fourteen) day period, YouCloud shall deal with the said money in accordance with the terms of the settlement arrivedat
+												</td>		
+											</tr>
+										</table>
+									</td>
+								</tr>
+							</table>
+						</div>
+						<!--[if (gte mso 9)|(IE)]>
+						</td><td width="50%" valign="top">
+						<![endif]-->
+						<div class="column">
+							<table width="100%">
+								<tr>
+									<td class="inner">
+										<table class="contents">
+											<tr>
+											<td width="5%" valign="top" class="text">
+												10.7.1.
+												</td>
+												<td class="text">
+													deduct the amount from the subsequent payment to Merchant;
+												</td>
+											</tr>
+										</table>
+									</td>
+								</tr>
+							</table>
+						</div>
+						<!--[if (gte mso 9)|(IE)]>
+						</td>
+						</tr>
+						</table>
+						<![endif]-->
+					</td>
+				</tr>
+				
+				
+				<tr>
+					<td class="two-column">
+						<!--[if (gte mso 9)|(IE)]>
+						<table width="100%">
+						<tr>
+						<td width="50%" valign="top">
+						<![endif]-->
+						<div class="column">
+							<table width="100%">
+								<tr>
+									<td class="inner">
+										<table class="contents">
+											<tr>
+											<td width="8%" valign="top" class="text">
+													<div>10.7.2.</div>
+												</td>
+												<td width="92%" class="text">
+													deduct the amount from security deposit (ifany); and
+												</td>		
+											</tr>
+										</table>
+									</td>
+								</tr>
+							</table>
+						</div>
+						<!--[if (gte mso 9)|(IE)]>
+						</td><td width="50%" valign="top">
+						<![endif]-->
+						<div class="column">
+							<table width="100%">
+								<tr>
+									<td class="inner">
+										<table class="contents">
+											<tr>
+											<td width="5%" valign="top" class="text">
+												10.7.3.
+												</td>
+												<td class="text">
+													claim from the Merchant the amount credited in the Customer’s YouCloud Wallet, along with the interest in force applicable for the time being.
+												</td>
+											</tr>
+										</table>
+									</td>
+								</tr>
+							</table>
+						</div>
+						<!--[if (gte mso 9)|(IE)]>
+						</td>
+						</tr>
+						</table>
+						<![endif]-->
+					</td>
+				</tr>
+				
+				
+				<tr>
+					<td class="two-column">
+						<!--[if (gte mso 9)|(IE)]>
+						<table width="100%">
+						<tr>
+						<td width="50%" valign="top">
+						<![endif]-->
+						<div class="column">
+							<table width="100%">
+								<tr>
+									<td class="inner">
+										<table class="contents">
+											<tr>
+											<td width="8%" valign="top" class="text">
+													<div>10.8.</div>
+												</td>
+												<td width="92%" class="text">
+													The Merchant will make provisions at the earliest for the amount payable to YouCloud under the T&Cs or the Merchant Agreement. If the Merchant fails to pay the amount within 15 (ﬁfteen) days from the date it is due for payment, it will be liable to pay interest asperstandard bankrates in Myanmar
+												</td>		
+											</tr>
+										</table>
+									</td>
+								</tr>
+							</table>
+						</div>
+						<!--[if (gte mso 9)|(IE)]>
+						</td><td width="50%" valign="top">
+						<![endif]-->
+						<div class="column">
+							<table width="100%">
+								<tr>
+									<td class="inner">
+										<table class="contents">
+											<tr>
+											<td width="5%" valign="top" class="text">
+												10.9.
+												</td>
+												<td class="text">
+													In case of a YouCloud transaction, Youwill not be entitled to make cash refunds or cancellations or to deal directly with the Customer. If the Merchant makes or attempts to make a refund in connection with the Transaction, in any manner other than through Us, it will constitute a breach of these T&Cs and the Merchant Agreement, and in suchanevent,We may have the right to terminate the Merchant Agreement.
+												</td>
+											</tr>
+										</table>
+									</td>
+								</tr>
+							</table>
+						</div>
+						<!--[if (gte mso 9)|(IE)]>
+						</td>
+						</tr>
+						</table>
+						<![endif]-->
+					</td>
+				</tr>
+				
+				
+				
+				<tr>
+					<td class="two-column">
+						<!--[if (gte mso 9)|(IE)]>
+						<table width="100%">
+						<tr>
+						<td width="50%" valign="top">
+						<![endif]-->
+						<div class="column">
+							<table width="100%">
+								<tr>
+									<td class="inner">
+										<table class="contents">
+											<tr>
+											<td width="8%" valign="top" class="text">
+													<div>10.10.</div>
+												</td>
+												<td width="92%" class="text">
+													All chargeback request sreceived by YouCloud from payment gateways for Merchant orders will be communicated to the Merchant, and the Merchant will have the ability to dispute the chargeback by providin gproof of delivery within7(seven)days from the date of communication. However, YouCloud will have the right to deduct the chargeback amount from YouCloud daily settlements vis-à-vis the Merchant, as and when such amount is deducted by the payment gateway.
+												</td>		
+											</tr>
+										</table>
+									</td>
+								</tr>
+							</table>
+						</div>
+						<!--[if (gte mso 9)|(IE)]>
+						</td><td width="50%" valign="top">
+						<![endif]-->
+						<div class="column">
+							<table width="100%">
+								<tr>
+									<td class="inner">
+										<table class="contents">
+											<tr>
+											<td width="5%" valign="top" class="text">
+												
+												</td>
+												<td class="text">
+												
+												</td>
+											</tr>
+										</table>
+									</td>
+								</tr>
+							</table>
+						</div>
+						<!--[if (gte mso 9)|(IE)]>
+						</td>
+						</tr>
+						</table>
+						<![endif]-->
+					</td>
+				</tr>
+				
+				
+				<tr>
+					<td class="two-column">
+						<!--[if (gte mso 9)|(IE)]>
+						<table width="100%">
+						<tr>
+						<td width="50%" valign="top">
+						<![endif]-->
+						<div class="column">
+							<table width="100%">
+								<tr>
+									<td class="inner">
+										<table class="contents">
+											<tr>
+											<td width="8%" valign="top" class="text">
+													<div>11</div>
+												</td>
+												<td width="92%" class="text">
+													<strong>Speciﬁc Obligations of the Merchant</strong>
+												</td>		
+											</tr>
+										</table>
+									</td>
+								</tr>
+							</table>
+						</div>
+						<!--[if (gte mso 9)|(IE)]>
+						</td><td width="50%" valign="top">
+						<![endif]-->
+						<div class="column">
+							<table width="100%">
+								<tr>
+									<td class="inner">
+										<table class="contents">
+											<tr>
+											<td width="5%" valign="top" class="text">
+												11.1.
+												</td>
+												<td class="text">
+													Any attempt to divert the Customers to anothers it eisprohibited. Any advertise- mentsormarket ingmessages that lead, prompt, or encour age the Customers to leave the Site areprohibited. The Merchant shall not commit the following:
+												</td>
+											</tr>
+										</table>
+									</td>
+								</tr>
+							</table>
+						</div>
+						<!--[if (gte mso 9)|(IE)]>
+						</td>
+						</tr>
+						</table>
+						<![endif]-->
+					</td>
+				</tr>
+				
+				
+				<tr>
+					<td class="two-column">
+						<!--[if (gte mso 9)|(IE)]>
+						<table width="100%">
+						<tr>
+						<td width="50%" valign="top">
+						<![endif]-->
+						<div class="column">
+							<table width="100%">
+								<tr>
+									<td class="inner">
+										<table class="contents">
+											<tr>
+											<td width="8%" valign="top" class="text">
+													<div>11.1.1.</div>
+												</td>
+												<td width="92%" class="text">
+													Include hyperlinks or URLs within any conﬁrmation e-mail messages generated by the Merchant in tended to divert the Customers away from the Site.
+												</td>		
+											</tr>
+										</table>
+									</td>
+								</tr>
+							</table>
+						</div>
+						<!--[if (gte mso 9)|(IE)]>
+						</td><td width="50%" valign="top">
+						<![endif]-->
+						<div class="column">
+							<table width="100%">
+								<tr>
+									<td class="inner">
+										<table class="contents">
+											<tr>
+											<td width="5%" valign="top" class="text">
+												11.1.2.
+												</td>
+												<td class="text">
+													Use aninaccurate business name. Business name used by the Merchant shall accurately identify the Merchant and shall not bemisleading. The Merchant shall ensure that the Merchant has the right to use the business name and that the name, trademark, or logo does not infringe the in tellectual property rights of any third party.
+												</td>
+											</tr>
+										</table>
+									</td>
+								</tr>
+							</table>
+						</div>
+						<!--[if (gte mso 9)|(IE)]>
+						</td>
+						</tr>
+						</table>
+						<![endif]-->
+					</td>
+				</tr>
+				
+				
+				<tr>
+					<td class="two-column">
+						<!--[if (gte mso 9)|(IE)]>
+						<table width="100%">
+						<tr>
+						<td width="50%" valign="top">
+						<![endif]-->
+						<div class="column">
+							<table width="100%">
+								<tr>
+									<td class="inner">
+										<table class="contents">
+											<tr>
+											<td width="8%" valign="top" class="text">
+													<div>11.1.3</div>
+												</td>
+												<td width="92%" class="text">
+													Send inappropriate e-mail communications to the Customers. All communications shall be courteous and relevant. Unsolicited e-mail communications to Customers or e-mails containing marketing communications of any kind, except as expressly permitted by Us, shall be prohibited.
+												</td>		
+											</tr>
+										</table>
+									</td>
+								</tr>
+							</table>
+						</div>
+						<!--[if (gte mso 9)|(IE)]>
+						</td><td width="50%" valign="top">
+						<![endif]-->
+						<div class="column">
+							<table width="100%">
+								<tr>
+									<td class="inner">
+										<table class="contents">
+											<tr>
+											<td width="5%" valign="top" class="text">
+												7.2.1.
+												</td>
+												<td class="text">
+													Register multiple accounts for the same business entity. If Youhave a legitimate business need for a second account, You shall make an application for the same to Us. Based on various standards, including but not limited to, good standing account with excellent Customer relationship, We may,at Our soled iscretion, approve the registration of the second account
+												</td>
+											</tr>
+										</table>
+									</td>
+								</tr>
+							</table>
+						</div>
+						<!--[if (gte mso 9)|(IE)]>
+						</td>
+						</tr>
+						</table>
+						<![endif]-->
+					</td>
+				</tr>
+				
+				
+				
+				<tr>
+					<td class="two-column">
+						<!--[if (gte mso 9)|(IE)]>
+						<table width="100%">
+						<tr>
+						<td width="50%" valign="top">
+						<![endif]-->
+						<div class="column">
+							<table width="100%">
+								<tr>
+									<td class="inner">
+										<table class="contents">
+											<tr>
+											<td width="8%" valign="top" class="text">
+													<div>12</div>
+												</td>
+												<td width="92%" class="text">
+													Revision of T&Cs We reserve the right to change any of the T&Cs or any policies or guidelines governing the Site/Wallet or Services, at any time an dat Our soled iscretion. Any changes will be eﬀective upon posting of the revisions on the Site.
+												</td>		
+											</tr>
+										</table>
+									</td>
+								</tr>
+							</table>
+						</div>
+						<!--[if (gte mso 9)|(IE)]>
+						</td><td width="50%" valign="top">
+						<![endif]-->
+						<div class="column">
+							<table width="100%">
+								<tr>
+									<td class="inner">
+										<table class="contents">
+											<tr>
+											<td width="7%" valign="top" class="text">
+												13
+												</td>
+												<td class="text">
+													No Warranties<br />
+The Site and its Servicesa reprovidedonan" asis" basis. We donot make any other representa- tions or warranties of any kind, express or implied, including without limitation that the Site or the Services will meet Your requirements, will always be available, accessible, uninterrupted, timely, secure, or operate withouterror.
+												</td>
+											</tr>
+										</table>
+									</td>
+								</tr>
+							</table>
+						</div>
+						<!--[if (gte mso 9)|(IE)]>
+						</td>
+						</tr>
+						</table>
+						<![endif]-->
+					</td>
+				</tr>
+				
+				
+				
+				<tr>
+					<td class="two-column">
+						<!--[if (gte mso 9)|(IE)]>
+						<table width="100%">
+						<tr>
+						<td width="50%" valign="top">
+						<![endif]-->
+						<div class="column">
+							<table width="100%">
+								<tr>
+									<td class="inner">
+										<table class="contents">
+											<tr>
+											<td width="8%" valign="top" class="text">
+													<div>14.</div>
+												</td>
+												<td width="92%" class="text">
+													<strong>General Release</strong>
+												</td>		
+											</tr>
+										</table>
+									</td>
+								</tr>
+							</table>
+						</div>
+						<!--[if (gte mso 9)|(IE)]>
+						</td><td width="50%" valign="top">
+						<![endif]-->
+						<div class="column">
+							<table width="100%">
+								<tr>
+									<td class="inner">
+										<table class="contents">
+											<tr>
+											<td width="5%" valign="top" class="text">
+												
+												</td>
+												<td class="text">
+													
+												</td>
+											</tr>
+										</table>
+									</td>
+								</tr>
+							</table>
+						</div>
+						<!--[if (gte mso 9)|(IE)]>
+						</td>
+						</tr>
+						</table>
+						<![endif]-->
+					</td>
+				</tr>
+				
+				
+				
+				<tr>
+					<td class="two-column">
+						<!--[if (gte mso 9)|(IE)]>
+						<table width="100%">
+						<tr>
+						<td width="50%" valign="top">
+						<![endif]-->
+						<div class="column">
+							<table width="100%">
+								<tr>
+									<td class="inner">
+										<table class="contents">
+											<tr>
+											<td width="8%" valign="top" class="text">
+													<div>14.1.</div>
+												</td>
+												<td width="92%" class="text">
+													We only provide a technology for facilitating the payments made by the Customer fortheproducts/services purchased from the Merchant. We are not involved in thetransaction between the Customer and the Merchant, and Wedo not provide any warranty or endorse the product/services sold byYou.
+												</td>		
+											</tr>
+										</table>
+									</td>
+								</tr>
+							</table>
+						</div>
+						<!--[if (gte mso 9)|(IE)]>
+						</td><td width="50%" valign="top">
+						<![endif]-->
+						<div class="column">
+							<table width="100%">
+								<tr>
+									<td class="inner">
+										<table class="contents">
+											<tr>
+											<td width="5%" valign="top" class="text">
+												14.2.
+												</td>
+												<td class="text">
+													We are not responsible for any non-performance or breach of any contract between You andCustomers.
+												</td>
+											</tr>
+										</table>
+									</td>
+								</tr>
+							</table>
+						</div>
+						<!--[if (gte mso 9)|(IE)]>
+						</td>
+						</tr>
+						</table>
+						<![endif]-->
+					</td>
+				</tr>
+				
+				<tr>
+					<td class="two-column">
+						<!--[if (gte mso 9)|(IE)]>
+						<table width="100%">
+						<tr>
+						<td width="50%" valign="top">
+						<![endif]-->
+						<div class="column">
+							<table width="100%">
+								<tr>
+									<td class="inner">
+										<table class="contents">
+											<tr>
+											<td width="8%" valign="top" class="text">
+													<div>14.3.</div>
+												</td>
+												<td width="92%" class="text">
+													At no time shall Wehold any right/title to or interest in the items nor have any obligations or liabilities with respect to such a contract between You and the Customer. We are not responsible for unsatisfactory or delayed performance of services, damages, or delays as a result of items which are out of stock or unavailable
+												</td>		
+											</tr>
+										</table>
+									</td>
+								</tr>
+							</table>
+						</div>
+						<!--[if (gte mso 9)|(IE)]>
+						</td><td width="50%" valign="top">
+						<![endif]-->
+						<div class="column">
+							<table width="100%">
+								<tr>
+									<td class="inner">
+										<table class="contents">
+											<tr>
+											<td width="5%" valign="top" class="text">
+												14.4.
+												</td>
+												<td class="text">
+													Notwithstanding its reasonable eﬀorts in that behalf, Wecannot control the information provided by other users which is made available on the Site. You may ﬁnd other user's information to be oﬀensive, harmful, inaccurate, or deceptive. Please use caution and practice safe trading when using the Site. Please note that there may be risks in dealing with underage persons or people acting under false pretense.
+												</td>
+											</tr>
+										</table>
+									</td>
+								</tr>
+							</table>
+						</div>
+						<!--[if (gte mso 9)|(IE)]>
+						</td>
+						</tr>
+						</table>
+						<![endif]-->
+					</td>
+				</tr>
+				
+				
+				<tr>
+					<td class="two-column">
+						<!--[if (gte mso 9)|(IE)]>
+						<table width="100%">
+						<tr>
+						<td width="50%" valign="top">
+						<![endif]-->
+						<div class="column">
+							<table width="100%">
+								<tr>
+									<td class="inner">
+										<table class="contents">
+											<tr>
+											<td width="8%" valign="top" class="text">
+													<div>14.5.</div>
+												</td>
+												<td width="92%" class="text">
+													If adispute arises between You and the Customer, YouCloud shall not beresponsi- ble for any claims, demands, and damages (actual and consequential) of every kind andnature, knownandunknown, suspected and unsuspected, disclosed and undisclosed, arisingou to for in anyway connected with such disputes. We shall not and are not required to mediat eorre solve disputes ordis agreements between You and Customers.
+												</td>		
+											</tr>
+										</table>
+									</td>
+								</tr>
+							</table>
+						</div>
+						<!--[if (gte mso 9)|(IE)]>
+						</td><td width="50%" valign="top">
+						<![endif]-->
+						<div class="column">
+							<table width="100%">
+								<tr>
+									<td class="inner">
+										<table class="contents">
+											<tr>
+											<td width="7%" valign="top" class="text">
+												15
+												</td>
+												<td class="text">
+													<strong>Jurisdiction and Governing Law and Dispute Resolution</strong>
+												</td>
+											</tr>
+										</table>
+									</td>
+								</tr>
+							</table>
+						</div>
+						<!--[if (gte mso 9)|(IE)]>
+						</td>
+						</tr>
+						</table>
+						<![endif]-->
+					</td>
+				</tr>
+				
+				
+				<tr>
+					<td class="two-column">
+						<!--[if (gte mso 9)|(IE)]>
+						<table width="100%">
+						<tr>
+						<td width="50%" valign="top">
+						<![endif]-->
+						<div class="column">
+							<table width="100%">
+								<tr>
+									<td class="inner">
+										<table class="contents">
+											<tr>
+											<td width="8%" valign="top" class="text">
+													<div>15.1.</div>
+												</td>
+												<td width="92%" class="text">
+													Any dispute arising outo for related to orconnected with any provision sunder this Agreement between You and Us shall be referred to the arbitration of a single arbitrator to be appointed jointly by the parties.
+												</td>		
+											</tr>
+										</table>
+									</td>
+								</tr>
+							</table>
+						</div>
+						<!--[if (gte mso 9)|(IE)]>
+						</td><td width="50%" valign="top">
+						<![endif]-->
+						<div class="column">
+							<table width="100%">
+								<tr>
+									<td class="inner">
+										<table class="contents">
+											<tr>
+											<td width="5%" valign="top" class="text">
+												15.2.
+												</td>
+												<td class="text">
+													Subject to the provision sofnegotiation and arbitration, each Party irrevocably and unconditionally submits to the jurisdiction of Courts at Myanmar.
+												</td>
+											</tr>
+										</table>
+									</td>
+								</tr>
+							</table>
+						</div>
+						<!--[if (gte mso 9)|(IE)]>
+						</td>
+						</tr>
+						</table>
+						<![endif]-->
+					</td>
+				</tr>
+				
+				<tr>
+					<td class="two-column">
+						<!--[if (gte mso 9)|(IE)]>
+						<table width="100%">
+						<tr>
+						<td width="50%" valign="top">
+						<![endif]-->
+						<div class="column">
+							<table width="100%">
+								<tr>
+									<td class="inner">
+										<table class="contents">
+											<tr>
+											<td width="8%" valign="top" class="text">
+													<div>15.3.</div>
+												</td>
+												<td width="92%" class="text">
+													The arbitration shall be conducted in Lagos in accordance with the Arbitration and Conciliation rule sor any modiﬁcation or reenactment in force for the time being.
+												</td>		
+											</tr>
+										</table>
+									</td>
+								</tr>
+							</table>
+						</div>
+						<!--[if (gte mso 9)|(IE)]>
+						</td><td width="50%" valign="top">
+						<![endif]-->
+						<div class="column">
+							<table width="100%">
+								<tr>
+									<td class="inner">
+										<table class="contents">
+											<tr>
+											<td width="5%" valign="top" class="text">
+												15.4.
+												</td>
+												<td class="text">
+													The language of arbitration shall be English. The arbitration shall be held at Myanmar.
+												</td>
+											</tr>
+										</table>
+									</td>
+								</tr>
+							</table>
+						</div>
+						<!--[if (gte mso 9)|(IE)]>
+						</td>
+						</tr>
+						</table>
+						<![endif]-->
+					</td>
+				</tr>
+				
+				<tr>
+					<td class="two-column">
+						<!--[if (gte mso 9)|(IE)]>
+						<table width="100%">
+						<tr>
+						<td width="50%" valign="top">
+						<![endif]-->
+						<div class="column">
+							<table width="100%">
+								<tr>
+									<td class="inner">
+										<table class="contents">
+											<tr>
+											<td width="8%" valign="top" class="text">
+													<div>15.5.</div>
+												</td>
+												<td width="92%" class="text">
+													The award of the arbitrator or arbitrators, as the case may be, shall be ﬁnal and binding on the parties.
+												</td>		
+											</tr>
+										</table>
+									</td>
+								</tr>
+							</table>
+						</div>
+						<!--[if (gte mso 9)|(IE)]>
+						</td><td width="50%" valign="top">
+						<![endif]-->
+						<div class="column">
+							<table width="100%">
+								<tr>
+									<td class="inner">
+										<table class="contents">
+											<tr>
+											<td width="5%" valign="top" class="text">
+												
+												</td>
+												<td class="text">
+													
+												</td>
+											</tr>
+										</table>
+									</td>
+								</tr>
+							</table>
+						</div>
+						<!--[if (gte mso 9)|(IE)]>
+						</td>
+						</tr>
+						</table>
+						<![endif]-->
+					</td>
+				</tr>
+				
+				
+				<tr>
+					<td class="two-column">
+						<!--[if (gte mso 9)|(IE)]>
+						<table width="100%">
+						<tr>
+						<td width="50%" valign="top">
+						<![endif]-->
+						<div class="column">
+							<table width="100%">
+								<tr>
+									<td class="inner">
+										<table class="contents">
+											<tr>
+											<td width="8%" valign="top" class="text">
+													<div>16</div>
+												</td>
+												<td width="92%" class="text">
+													<strong>Indemnity</strong>
+												</td>		
+											</tr>
+										</table>
+									</td>
+								</tr>
+							</table>
+						</div>
+						<!--[if (gte mso 9)|(IE)]>
+						</td><td width="50%" valign="top">
+						<![endif]-->
+						<div class="column">
+							<table width="100%">
+								<tr>
+									<td class="inner">
+										<table class="contents">
+											<tr>
+											<td width="5%" valign="top" class="text">
+												
+												</td>
+												<td class="text">
+													
+												</td>
+											</tr>
+										</table>
+									</td>
+								</tr>
+							</table>
+						</div>
+						<!--[if (gte mso 9)|(IE)]>
+						</td>
+						</tr>
+						</table>
+						<![endif]-->
+					</td>
+				</tr>
+				
+				<tr>
+					<td class="two-column">
+						<!--[if (gte mso 9)|(IE)]>
+						<table width="100%">
+						<tr>
+						<td width="50%" valign="top">
+						<![endif]-->
+						<div class="column">
+							<table width="100%">
+								<tr>
+									<td class="inner">
+										<table class="contents">
+											<tr>
+											<td width="8%" valign="top" class="text">
+													<div>16.1.</div>
+												</td>
+												<td width="92%" class="text">
+													You will defend, indemnify, and holdharmless YouCloud and each of the iraﬃliates (and their respective employees, directors, agents, and representatives) from and against any and all claims, costs, losses, damages, judgments, penalties, interests, and expenses (including reason able attorneys’fees) arising from any Claimthatar isesou to fo rrelatesto:
+												</td>
+											</tr>
+										</table>
+									</td>
+								</tr>
+							</table>
+						</div>
+						<!--[if (gte mso 9)|(IE)]>
+						</td><td width="50%" valign="top">
+						<![endif]-->
+						<div class="column">
+							<table width="100%">
+								<tr>
+									<td class="inner">
+										<table class="contents">
+											<tr>
+												<td width="8%">
+												
+												</td>
+												<td width="5%" valign="top" class="text">
+													a.
+												</td>
+												<td class="text">
+													refund, chargebacks and cancellation of payments;	
+												</td>
+											</tr>
+											<tr>
+												<td width="8%">
+												
+												</td>
+												<td width="5%" valign="top" class="text">
+													b.
+												</td>
+												<td class="text">
+													any actual or all egedbrea chof Your represent ation sorobligations
+												</td>
+												<tr>
+												<td width="8%">
+												
+												</td>
+												<td width="5%" valign="top" class="text">
+													c.
+												</td>
+												<td class="text">
+													any transaction that is for any reasonun law fulorunen forceable
+												</td>
+											</tr>
+											<tr>
+												<td width="8%">
+												
+												</td>
+												<td width="5%" valign="top" class="text">
+													d.
+												</td>
+												<td class="text">
+													any transaction that isposted more than once to cardholder's account
+												</td>
+											</tr>
+											<tr>
+												<td width="8%">
+												
+												</td>
+												<td width="5%" valign="top" class="text">
+													e.
+												</td>
+												<td class="text">
+													any transaction that is doubtful or erroneously paid to You;
+												</td>
+											</tr>
+											<tr>
+												<td width="8%">
+												
+												</td>
+												<td width="5%" valign="top" class="text">
+													f.
+												</td>
+												<td class="text">
+													sale of Banned Goods/ Services; and
+												</td>
+											</tr>
+											<tr>
+												<td width="8%">
+												
+												</td>
+												<td width="5%" valign="top" class="text">
+													g.
+												</td>
+												<td class="text">
+													products/services provided by You.
+												</td>
+											</tr>
+											
+										</table>
+									</td>
+								</tr>
+							</table>
+						</div>
+						<!--[if (gte mso 9)|(IE)]>
+						</td>
+						</tr>
+						</table>
+						<![endif]-->
+					</td>
+				</tr>
+				
+				
+				<tr>
+					<td class="two-column">
+						<!--[if (gte mso 9)|(IE)]>
+						<table width="100%">
+						<tr>
+						<td width="50%" valign="top">
+						<![endif]-->
+						<div class="column">
+							<table width="100%">
+								<tr>
+									<td class="inner">
+										<table class="contents">
+											<tr>
+											<td width="8%" valign="top" class="text">
+													<div>17</div>
+												</td>
+												<td width="92%" class="text">
+													<strong>Notices and communication</strong>
+												</td>		
+											</tr>
+										</table>
+									</td>
+								</tr>
+							</table>
+						</div>
+						<!--[if (gte mso 9)|(IE)]>
+						</td><td width="50%" valign="top">
+						<![endif]-->
+						<div class="column">
+							<table width="100%">
+								<tr>
+									<td class="inner">
+										<table class="contents">
+											<tr>
+											<td width="5%" valign="top" class="text">
+												
+												</td>
+												<td class="text">
+													
+												</td>
+											</tr>
+										</table>
+									</td>
+								</tr>
+							</table>
+						</div>
+						<!--[if (gte mso 9)|(IE)]>
+						</td>
+						</tr>
+						</table>
+						<![endif]-->
+					</td>
+				</tr>
+				
+				<tr>
+					<td class="two-column">
+						<!--[if (gte mso 9)|(IE)]>
+						<table width="100%">
+						<tr>
+						<td width="50%" valign="top">
+						<![endif]-->
+						<div class="column">
+							<table width="100%">
+								<tr>
+									<td class="inner">
+										<table class="contents">
+											<tr>
+											<td width="8%" valign="top" class="text">
+													<div>17.1.</div>
+												</td>
+												<td width="92%" class="text">
+													Any notice or notiﬁcation inconnection with these T&Cs or Merchant Agreement executed with a Merchant will becommunicated through the contact in formation speciﬁedin the Merchant Agreement, unless other wise speciﬁed
+												</td>		
+											</tr>
+										</table>
+									</td>
+								</tr>
+							</table>
+						</div>
+						<!--[if (gte mso 9)|(IE)]>
+						</td><td width="50%" valign="top">
+						<![endif]-->
+						<div class="column">
+							<table width="100%">
+								<tr>
+									<td class="inner">
+										<table class="contents">
+											<tr>
+											<td width="5%" valign="top" class="text">
+												17.2.
+												</td>
+												<td class="text">
+													All Your communication with Us will be of aprofessional natureonly. You willnot contact Us to harass, intimidate, or threaten any person or to promote any cause which You maysupport.
+												</td>
+											</tr>
+										</table>
+									</td>
+								</tr>
+							</table>
+						</div>
+						<!--[if (gte mso 9)|(IE)]>
+						</td>
+						</tr>
+						</table>
+						<![endif]-->
+					</td>
+				</tr>
+				
+				<tr>
+					<td class="two-column">
+						<!--[if (gte mso 9)|(IE)]>
+						<table width="100%">
+						<tr>
+						<td width="50%" valign="top">
+						<![endif]-->
+						<div class="column">
+							<table width="100%">
+								<tr>
+									<td class="inner">
+										<table class="contents">
+											<tr>
+											<td width="8%" valign="top" class="text">
+													<div>17.3.</div>
+												</td>
+												<td width="92%" class="text">
+													You will be subject to Our Terms of Use and Privacy Policy updated from time to time.
+												</td>		
+											</tr>
+										</table>
+									</td>
+								</tr>
+							</table>
+						</div>
+						<!--[if (gte mso 9)|(IE)]>
+						</td><td width="50%" valign="top">
+						<![endif]-->
+						<div class="column">
+							<table width="100%">
+								<tr>
+									<td class="inner">
+										<table class="contents">
+											<tr>
+											<td width="5%" valign="top" class="text">
+											
+												</td>
+												<td class="text">
+													
+												</td>
+											</tr>
+										</table>
+									</td>
+								</tr>
+							</table>
+						</div>
+						<!--[if (gte mso 9)|(IE)]>
+						</td>
+						</tr>
+						</table>
+						<![endif]-->
+					</td>
+				</tr>
+				
+				
+				<tr>
+					<td class="two-column">
+						<!--[if (gte mso 9)|(IE)]>
+						<table width="100%">
+						<tr>
+						<td width="50%" valign="top">
+						<![endif]-->
+						<div class="column">
+							<table width="100%">
+								<tr>
+									<td class="inner">
+										<table class="contents">
+											<tr>
+											<td width="8%" valign="top" class="text">
+													18
+												</td>
+												<td width="92%" class="text">
+													<strong>Severability</strong>
+												</td>		
+											</tr>
+										</table>
+									</td>
+								</tr>
+							</table>
+						</div>
+						<!--[if (gte mso 9)|(IE)]>
+						</td><td width="50%" valign="top">
+						<![endif]-->
+						<div class="column">
+							<table width="100%">
+								<tr>
+									<td class="inner">
+										<table class="contents">
+											<tr>
+											<td width="5%" valign="top" class="text">
+											
+												</td>
+												<td class="text">
+													
+												</td>
+											</tr>
+										</table>
+									</td>
+								</tr>
+							</table>
+						</div>
+						<!--[if (gte mso 9)|(IE)]>
+						</td>
+						</tr>
+						</table>
+						<![endif]-->
+					</td>
+				</tr>
+				
+				<tr>
+					<td class="two-column">
+						<!--[if (gte mso 9)|(IE)]>
+						<table width="100%">
+						<tr>
+						<td width="50%" valign="top">
+						<![endif]-->
+						<div class="column">
+							<table width="100%">
+								<tr>
+									<td class="inner">
+										<table class="contents">
+											<tr>
+											<td width="8%" valign="top" class="text">
+												
+												</td>
+												<td width="92%" class="text">
+													If any partof these T&Cs isdetermined to beinvalid orunen force able pursuant to Applicable Laws then the invalid or unenforceable provisions will be deemed superseded by a valid, enforceable provision that most closely matches the intent of the original provision and the remainder of these T&Cs will continue ineﬀect.
+												</td>		
+											</tr>
+										</table>
+									</td>
+								</tr>
+							</table>
+						</div>
+						<!--[if (gte mso 9)|(IE)]>
+						</td><td width="50%" valign="top">
+						<![endif]-->
+						<div class="column">
+							<table width="100%">
+								<tr>
+									<td class="inner">
+										<table class="contents">
+											<tr>
+											<td width="5%" valign="top" class="text">
+											
+												</td>
+												<td class="text">
+													
+												</td>
+											</tr>
+										</table>
+									</td>
+								</tr>
+							</table>
+						</div>
+						<!--[if (gte mso 9)|(IE)]>
+						</td>
+						</tr>
+						</table>
+						<![endif]-->
+					</td>
+				</tr>
+				
+				
+				
+				<tr>
+					<td class="two-column">
+						<!--[if (gte mso 9)|(IE)]>
+						<table width="100%">
+						<tr>
+						<td width="50%" valign="top">
+						<![endif]-->
+						<div class="column">
+							<table width="100%">
+								<tr>
+									<td class="inner">
+										<table class="contents">
+											<tr>
+											<td width="50%" valign="top" class="text">
+													<strong>ScheduleI<br /><br />
+													List of Banned Items</strong>
+												</td>
+												<td width="92%" class="text">
+												
+												</td>		
+											</tr>
+											<tr>
+										</table>
+									</td>
+								</tr>
+							</table>
+						</div>
+						<!--[if (gte mso 9)|(IE)]>
+						</td><td width="50%" valign="top">
+						<![endif]-->
+						<div class="column">
+							<table width="100%">
+								<tr>
+									<td class="inner">
+										<table class="contents">
+											<tr>
+											<td width="5%" valign="top" class="text">
+											
+												</td>
+												<td class="text">
+												</td>
+											</tr>
+										</table>
+									</td>
+								</tr>
+							</table>
+						</div>
+						<!--[if (gte mso 9)|(IE)]>
+						</td>
+						</tr>
+						</table>
+						<![endif]-->
+					</td>
+				</tr>
+				
+				<tr>
+					<td class="two-column">
+						<!--[if (gte mso 9)|(IE)]>
+						<table width="100%">
+						<tr>
+						<td width="50%" valign="top">
+						<![endif]-->
+						<div class="column">
+							<table width="100%">
+								<tr>
+									<td class="inner">
+										<table class="contents">
+											<tr>
+												<td width="4%" valign="top" class="text">
+												1.
+												</td>
+												<td width="92%" class="text">
+													Gaming which includes lottery tickets, sports bets, memberships/ enrollmentinonline gambling sites, and related content.
+												</td>		
+											</tr>
+											<tr>
+												<td width="4%" valign="top" class="text">
+												2.
+												</td>
+												<td width="92%" class="text">
+													Oﬀensive goods which includes literature, products, or other materials that (a) defame or slander any person or groups of people based on race, ethnicity, national origin, religion, sex, or other factors; (b) encourage or incite violent acts; (c) promote intolerance or hatred.
+												</td>		
+											</tr>
+											<tr>
+												<td width="4%" valign="top" class="text">
+												3.
+												</td>
+												<td width="92%" class="text">
+													Weapons  which  includes  ﬁrearms,  ammunition,  knives,  brass  knuckles, gunparts, and other armaments.
+												</td>		
+											</tr>
+											<tr>
+												<td width="4%" valign="top" class="text">
+												4.
+												</td>
+												<td width="92%" class="text">
+													Adult good sand services which includes pornography and other sexually suggestive materials (including literature, imagery, and other media); escort or prostitution services; Site accessand / or Site member shipsof pornogr aphyor illegal sites.
+												</td>		
+											</tr>
+											
+											<tr>
+												<td width="4%" valign="top" class="text">
+												5.
+												</td>
+												<td width="92%" class="text">
+												 	Bulk  marketing  tools  which  include  e-mail  lists,  software,  or  other    productsenabling unsolicited e-mail messages (spam).
+												</td>		
+											</tr>
+											<tr>
+												<td width="4%" valign="top" class="text">
+												6.
+												</td>
+												<td width="92%" class="text">
+													 Child pornography which include spornographicmaterials involvingminors
+												</td>		
+											</tr>
+											<tr>
+												<td width="4%" valign="top" class="text">
+												7.
+												</td>
+												<td width="92%" class="text">
+													Copy right unlock ingdevices which includes modchipsorother devices designed to circumvent copyright protection.
+												</td>		
+											</tr>
+											<tr>
+												<td width="4%" valign="top" class="text">
+												8.
+												</td>
+												<td width="92%" class="text">
+													Drugs and drugparapher nalia which includeillegald rugsanddrug accessories, including herbal drugs like salvia and magic mushrooms.
+												</td>		
+											</tr>
+											<tr>
+												<td width="4%" valign="top" class="text">
+												9.
+												</td>
+												<td width="92%" class="text">
+													Hacking and cracking materials which include manuals, how-to guides, information,  orequipment, enabling illegal accessto software, servers, websites, or other protected property.
+												</td>		
+											</tr>
+											<tr>
+												<td width="4%" valign="top" class="text">
+												10.
+												</td>
+												<td width="92%" class="text">
+													Oﬀensive  goods,  crime  which  includes  crime  scene  photos  or  items,  suchaspersonal belongings, associated with criminals.
+												</td>		
+											</tr>
+											
+											<tr>
+												<td width="4%" valign="top" class="text">
+												11.
+												</td>
+												<td width="92%" class="text">
+												 	Pyrotechnic devices, combustibles, corrosives, and hazardous materials which includes explosives, ﬁreworks and related goods; toxic, ﬂammable, and radioactive materials andsubstances.
+												</td>		
+											</tr>
+											<tr>
+												<td width="4%" valign="top" class="text">
+												12.
+												</td>
+												<td width="92%" class="text">
+													Regulated goods which includes air bags; batteries containing mercury; freon, or similar substances/refrigerants; chemical/industrial solvents; government uniforms; car titles; license plates; police badges and law enforcement equipment; lock-picking devices; pesticides; postage meters; recalled items; slot machines; surveillance equipment; goods regulated by government or other agency speciﬁcations.
+												</td>		
+											</tr>
+											<tr>
+												<td width="4%" valign="top" class="text">
+												13.
+												</td>
+												<td width="92%" class="text">
+													Securities which includes stocks, bonds, or related ﬁnancial products.
+												</td>		
+											</tr>
+											<tr>
+												<td width="4%" valign="top" class="text">
+												14.
+												</td>
+												<td width="92%" class="text">
+													Any product or service which is not incompliance with all Applicable Laws.
+												</td>		
+											</tr>
+										</table>
+									</td>
+								</tr>
+							</table>
+						</div>
+						<!--[if (gte mso 9)|(IE)]>
+						</td><td width="50%" valign="top">
+						<![endif]-->
+						<div class="column">
+							<table width="100%">
+								<tr>
+									<td class="inner">
+										<table class="contents">
+											<tr>
+											<td width="5%" valign="top" class="text">
+											
+												</td>
+												<td class="text">
+												</td>
+											</tr>
+										</table>
+									</td>
+								</tr>
+							</table>
+						</div>
+						<!--[if (gte mso 9)|(IE)]>
+						</td>
+						</tr>
+						</table>
+						<![endif]-->
+					</td>
+				</tr>
+				
+				
+				
+				
+				
+			</table>
+			<!--[if (gte mso 9)|(IE)]>
+			</td>
+			</tr>
+			</table>
+			<![endif]-->
+		</div>
+	</center>
+</body>
+</html>

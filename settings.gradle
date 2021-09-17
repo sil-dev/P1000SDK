@@ -1,0 +1,3 @@
+rootProject.name = "P1000SDK"
+include ':app'
+include ':app:silp1000sdk'

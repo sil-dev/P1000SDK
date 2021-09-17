@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fitsSystemWindows="true"
+    android:orientation="vertical"
+    android:padding="@dimen/layoutpading">
+
+    <Button
+        android:id="@+id/btnLogin"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/layoutpading"
+        android:background="@drawable/buttonpress"
+        android:text="Login"
+        android:textColor="@color/white"
+        android:textSize="@dimen/txtsize" />
+
+    <Button
+        android:id="@+id/btnLoadMainKeys"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/layoutpading"
+        android:layout_marginRight="@dimen/layoutpading"
+        android:background="@drawable/buttonpress"
+        android:text="Load Main Keys"
+        android:textColor="@color/white"
+        android:textSize="@dimen/txtsize" />
+
+    <Button
+        android:id="@+id/btnLoadWorkKeys"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/layoutpading"
+        android:layout_marginRight="@dimen/layoutpading"
+        android:layout_marginTop="@dimen/layoutpading"
+        android:background="@drawable/buttonpress"
+        android:text="Load Working Keys"
+        android:textColor="@color/white"
+        android:textSize="@dimen/txtsize" />
+
+     <Button
+         android:id="@+id/btnStartLogs"
+         android:layout_width="match_parent"
+         android:layout_height="wrap_content"
+         android:layout_marginLeft="@dimen/layoutpading"
+         android:layout_marginRight="@dimen/layoutpading"
+         android:layout_marginTop="@dimen/layoutpading"
+         android:background="@drawable/buttonpress"
+         android:text="Record Log"
+         android:textColor="@color/white"
+         android:textSize="@dimen/txtsize" />
+</LinearLayout>
