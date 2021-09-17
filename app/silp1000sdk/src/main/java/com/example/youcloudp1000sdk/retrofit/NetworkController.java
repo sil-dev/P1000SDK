@@ -25,20 +25,13 @@ import retrofit2.converter.gson.GsonConverterFactory;
 
 public class NetworkController {
 
-    //9.77 UAT
-     public static final String MAIN_URL = "http://199.34.22.225:9087/";
-    //public static String MAIN_URL = "http://199.34.22.236:9406/";//public
-    //public static String BASE_URL = MAIN_URL + "YouCloudMiddleware/";
-    public static String BASE_URL = MAIN_URL + "YouCloudMiddlewarePre/";
+    //SDK URL
+    public static final String MAIN_URL = "https://app.youcloudpayment.in/";
+    public static String BASE_URL = MAIN_URL + "sdk/";
 
     private ApiListener apiService;
 
     public NetworkController() {
-       // configureURL(false);
-        String hostname = "nownow.com.mm";
-        CertificatePinner certificatePinner = new CertificatePinner.Builder()
-                .add(hostname, "sha256/AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=")
-                .build();
         OkHttpClient client = new OkHttpClient.Builder()
                 .connectTimeout(60, TimeUnit.SECONDS)
                 .readTimeout(180, TimeUnit.SECONDS)
@@ -77,6 +70,7 @@ public class NetworkController {
             public void onResponse(Call call, Response response) {
                 responseListener.onResponseSuccess(response, d);
             }
+
             @Override
             public void onFailure(Call call, Throwable t) {
                 t.printStackTrace();
