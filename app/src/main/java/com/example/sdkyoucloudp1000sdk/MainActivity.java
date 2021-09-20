@@ -23,6 +23,7 @@ import org.json.JSONObject;
 
 public class MainActivity extends AppCompatActivity {
 
+    //SHANKY
     P1000Manager p1000Manager;
     TextView statusTv, responseCodeTv, responseMessageTv, version;
     CustomDialog customDialog;
