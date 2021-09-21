@@ -94,7 +94,7 @@ public class P1000Manager implements TransactionCallback {
      private String defTDKey = "AFEBF49CA262712933F4DAB70C093B9C";
      private String defTDKeyKcv = null;*/
 
-    private String validateId = "com.sil.youcloudp1000sdk";
+    private String validateId = "";
     String fName;
     Context getActivity;
     protected ProcessDialog processdialog = null;
