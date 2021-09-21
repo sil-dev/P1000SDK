@@ -311,7 +311,7 @@ public class P1000Manager implements TransactionCallback {
             if (getActivity != null) {
                 if (P1000Request != null && P1000Request.isValidRequest()) {
                     this.P1000Request = P1000Request;
-                    //validateId = getActivity.getPackageName();
+                    validateId = getActivity.getPackageName();
                     P1000Request.setRefCompany(validateId);
                     if (validateId != null) {
                         validePackage(P1000Request, p1000CallBacks, null, false);
