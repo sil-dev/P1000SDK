@@ -585,19 +585,17 @@ public class P1000Manager implements TransactionCallback {
         }
     }
 
-
-    private JSONObject getFailJSON(String msg, int responseCode) {
+private JSONObject getFailJSON(String msg, int responseCode) {
         JSONObject jsonObject = new JSONObject();
         try {
-            jsonObject.put("msg", msg);
-            jsonObject.put("respCode", "AD"+responseCode);
-            jsonObject.put("status", false);
+            jsonObject.put("Msg", "Failed");
+            jsonObject.put("ResponseCode", responseCode);
+            jsonObject.put("Response", msg);
         } catch (Exception e) {
             e.printStackTrace();
         }
         return jsonObject;
     }
-
 
     private void startPayment(P1000Request p1000Request, P1000CallBacks p1000CallBacks, String flag) {
         try {
@@ -679,18 +677,13 @@ public class P1000Manager implements TransactionCallback {
         }
     }
 
-    private void setResult(boolean status, String message, int responseCode, String responseJson, P1000CallBacks p1000CallBacks) {
+   private void setResult(boolean status, String message, int responseCode, String responseJson, P1000CallBacks p1000CallBacks) {
         try {
             if (p1000CallBacks != null) {
                 JSONObject jsonObject = new JSONObject();
-                
-                 jsonObject.put("msg", message);
-                jsonObject.put("respCode", responseCode);
-                jsonObject.put("status", status);
-                
-               // jsonObject.put("Msg", message);
-                //jsonObject.put("ResponseCode", responseCode);
-                //jsonObject.put("Response", responseJson);
+                jsonObject.put("Msg", message);
+                jsonObject.put("ResponseCode", responseCode);
+                jsonObject.put("Response", responseJson);
                 if (status) {
                     p1000CallBacks.successCallback(jsonObject);
                     p1000CallBacks = null;
@@ -703,7 +696,6 @@ public class P1000Manager implements TransactionCallback {
             e.printStackTrace();
         }
     }
-
 
 
     private void checkTrasctionStatus(final P1000Request p1000Request, final StatusCallBack statusCallBack) {
