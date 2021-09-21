@@ -589,9 +589,9 @@ public class P1000Manager implements TransactionCallback {
     private JSONObject getFailJSON(String msg, int responseCode) {
         JSONObject jsonObject = new JSONObject();
         try {
-            jsonObject.put("Msg", "Failed");
-            jsonObject.put("ResponseCode", responseCode);
-            jsonObject.put("Response", msg);
+            jsonObject.put("msg", msg);
+            jsonObject.put("respCode", "AD"+responseCode);
+            jsonObject.put("status", false);
         } catch (Exception e) {
             e.printStackTrace();
         }
@@ -683,9 +683,14 @@ public class P1000Manager implements TransactionCallback {
         try {
             if (p1000CallBacks != null) {
                 JSONObject jsonObject = new JSONObject();
-                jsonObject.put("Msg", message);
-                jsonObject.put("ResponseCode", responseCode);
-                jsonObject.put("Response", responseJson);
+                
+                 jsonObject.put("msg", message);
+                jsonObject.put("respCode", responseCode);
+                jsonObject.put("status", status);
+                
+               // jsonObject.put("Msg", message);
+                //jsonObject.put("ResponseCode", responseCode);
+                //jsonObject.put("Response", responseJson);
                 if (status) {
                     p1000CallBacks.successCallback(jsonObject);
                     p1000CallBacks = null;
