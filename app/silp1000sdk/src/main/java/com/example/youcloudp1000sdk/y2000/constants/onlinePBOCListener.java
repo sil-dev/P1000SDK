@@ -421,13 +421,13 @@ public class onlinePBOCListener implements OnPBOCListener {
                     Log.d("SHANKY", "PBOC Communication sending:" + CommuStatus.getStatusMsg(CommuStatus.SENDING));
                     p1000CallBacks.progressCallback("PBOC Communication sending:" + CommuStatus.getStatusMsg(CommuStatus.SENDING));
 
-                   // context.freshProcessDialog("Please Wait", "commu send data...");
+                    // context.freshProcessDialog("Please Wait", "commu send data...");
                     break;
                 case CommuStatus.RECVING:
                     Log.d("SHANKY", "PBOC Communication recving:" + CommuStatus.getStatusMsg(CommuStatus.RECVING));
                     p1000CallBacks.progressCallback("PBOC Communication receiving:" + CommuStatus.getStatusMsg(CommuStatus.RECVING));
 
-                //    context.freshProcessDialog("Please Wait", "commu recv data...");
+                    //    context.freshProcessDialog("Please Wait", "commu recv data...");
                     break;
                 case CommuStatus.FINISH:
                     Log.d("SHANKY", "PBOC Communication finish:" + CommuStatus.getStatusMsg(CommuStatus.FINISH));
@@ -445,7 +445,7 @@ public class onlinePBOCListener implements OnPBOCListener {
         @Override
         public void OnError(int paramInt, String paramString) {
             Log.d("SHANKY", "PBOC Communication error code:" + paramInt + " error:" + paramString);
-          //  context.freshProcessDialog("Please Wait", "commu finish...");
+            //  context.freshProcessDialog("Please Wait", "commu finish...");
             p1000CallBacks.failureCallback(getFailJSON("PBOC Communication error code:" + paramInt + " error:" + paramString, 99));
 
             online_transaction.sendEmptyMessage(ONLINE_PROCESS_FINISH);
@@ -497,22 +497,22 @@ public class onlinePBOCListener implements OnPBOCListener {
                                             isTxOL = true;
                                             if (response.body() != null) {
                                                 resp = response.body();
-                                                 originalTxStatus = resp.isStatus();
+                                                originalTxStatus = resp.isStatus();
                                                 Log.d("SHANKY", "" + response.body());
-                                                setResult(true, response.body().getMsg(), response.code(), new Gson().toJson(resp), p1000CallBacks);
+                                                //  setResult(true, response.body().getMsg(), response.code(), new Gson().toJson(resp), p1000CallBacks);
 
                                                 //        p1000CallBacks.successCallback(getFailJSON("Status Msg :" + response.body().getMsg(),response.code()));
                                             } else {
-                                                if (req.getRequestcode() != null) {
+                                               /* if (req.getRequestcode() != null) {
                                                     if (req.getRequestcode().equalsIgnoreCase(Constants.MICRO_CASH_WITHDRAW_SBM) || req.getRequestcode().equalsIgnoreCase("microCashWithdraw") || (req.getRequestcode() != null && req.getRequestcode().equalsIgnoreCase("doCardPayment"))) {
                                                         recall(3, new RequestParams());
                                                         return;
                                                     }
-                                                }
+                                                }*/
                                                 resp.setStatus(false);
                                                 resp.setMsg("Null Responce");
                                                 resp.setRrn(" - ");
-                                                resp.setRespCode("91");
+                                                resp.setRespCode("404");
                                                 resp.setAuthid("  - ");
                                                 resp.setInvoiceNumber(" - ");
                                                 resp.setCardno("---");
@@ -524,7 +524,7 @@ public class onlinePBOCListener implements OnPBOCListener {
                                                 resp.setTsi("");
                                                 resp.setApplName("");
                                                 resp.setCardType("-");
-                                                resp.setHitachiResCode("91");
+                                                resp.setHitachiResCode("404");
                                             }
                                             online_transaction.sendEmptyMessage(ONLINE_PROCESS_FINISH);
                                         }
@@ -532,25 +532,20 @@ public class onlinePBOCListener implements OnPBOCListener {
                                         @Override
                                         public void onResponseFailure(Throwable t, SuccessCustomDialog d) {
                                             Log.e("", t.toString());
-                                            p1000CallBacks.failureCallback(getFailJSON("Status Msg :" + t.getMessage(),101));
-                                            if (req.getRequestcode() != null) {
-                                                if (req.getRequestcode().equalsIgnoreCase("microCashWithdrawIcici") || req.getRequestcode().equalsIgnoreCase("microCashWithdraw") || (req.getRequestcode() != null && req.getRequestcode().equalsIgnoreCase("doCardPayment"))) {
+                                            // p1000CallBacks.failureCallback(getFailJSON("Status Msg :" + t.getMessage(),101));
+                                            /*if (req.getRequestcode() != null) {
+                                                if (req.getRequestcode().equalsIgnoreCase("microCashWithdrawSbm")||req.getRequestcode().equalsIgnoreCase("microCashWithdrawIcici") || req.getRequestcode().equalsIgnoreCase("microCashWithdraw") || (req.getRequestcode() != null && req.getRequestcode().equalsIgnoreCase("doCardPayment"))) {
                                                     recall(3, new RequestParams());
                                                     return;
                                                 }
-                                            }
+                                            }*/
                                             try {
-                                               // context.dismissDialog();
-                                                p1000CallBacks.failureCallback(getFailJSON("Checkb Internet Connection", 404));
-
+                                                p1000CallBacks.failureCallback(getFailJSON("Check Internet Connection", 404));
                                                 if (d != null)
                                                     d.cancel();
                                             } catch (Exception e) {
-
                                             }
-                                            p1000CallBacks.failureCallback(getFailJSON("Checkb Internet Connection", 404));
-                                            //   FailCustomDialog fDialog = new FailCustomDialog(context.getContext(), "Fail...", "Check Internet Connection", "");
-                                           // fDialog.show();
+
                                         }
                                     });
                                 }
@@ -746,7 +741,7 @@ public class onlinePBOCListener implements OnPBOCListener {
                         }
                     }
                     try {
-                      //  p1000CallBacks.failureCallback(getFailJSON("Check Internet Connection", 404));
+                        //  p1000CallBacks.failureCallback(getFailJSON("Check Internet Connection", 404));
                     } catch (Exception e) {
 
                     }
@@ -865,7 +860,7 @@ public class onlinePBOCListener implements OnPBOCListener {
                 cardno = magCardInfo.getPAN();
 
                 ifOnlinePIN = true;
-               try {
+                try {
                     String track2 = magCardInfo.getTrack2HexString();
                     if (track2 == null || track2.equalsIgnoreCase("") || track2.equalsIgnoreCase("null")) {
                         resp.setStatus(false);
@@ -917,7 +912,7 @@ public class onlinePBOCListener implements OnPBOCListener {
                             if (serviceCode.startsWith("2") || serviceCode.startsWith("6")) {
                                 //Fallback Case : Force User for EMV
                                 isEmvForced = true;
-                               // context.dismissDialog();
+                                // context.dismissDialog();
                                 resp.setStatus(false);
                                 resp.setMsg("Use Chip Card");
                                 resp.setRrn(" - ");
@@ -1045,7 +1040,7 @@ public class onlinePBOCListener implements OnPBOCListener {
     @Override
     public void onConfirmCardInfo(Intent info) {
         Log.d("SHANKY", "PBOC Confirm Card Info");
-       // context.dismissDialog();
+        // context.dismissDialog();
         OutputCardInfoData out = new OutputCardInfoData(info);
         Log.d("SHANKY", "IC card SN:" + out.getCardSN());
         Log.d("SHANKY", "IC card number:" + out.getPAN());
@@ -1165,15 +1160,7 @@ public class onlinePBOCListener implements OnPBOCListener {
                         Log.d("SHANKY", "SCRIPT RESULT1 : " + SCRIPTRESULT);
                     }*/
 
-                    if (req.getReader().equalsIgnoreCase("EMV") && isTxOL) {
-                        //if (extras.getString("TC") != null && !extras.getString("TC").equalsIgnoreCase("")) {
-                        Update5513.ctx = context;
-                        Intent intent = new Intent(context, Update5513.class);
-                        intent.putExtra("rrn", "" + resp.getRrn());
-                        intent.putExtra("5513", req.getTag55() + "" + concatEMVTag("9F5B", SCRIPTRESULT));
-                        context.startService(intent);
-                        //}
-                    }
+
                 } catch (Exception e) {
                     e.printStackTrace();
                 }
@@ -1221,15 +1208,12 @@ public class onlinePBOCListener implements OnPBOCListener {
                     e.printStackTrace();
                 }
                 setResult(true, "Success", 00, new Gson().toJson(resp), p1000CallBacks);
-
+                Log.d("Dhanu","Respons"+new Gson().toJson(resp));
                 //context.updateData(resp);
             } else if (result == PBOCTransactionResult.TERMINATED) {
-                //transaction the fail as well as stopping the transaction(交易失败并且停止交易)
                 Log.d("SHANKY", "PBOC Transaction fail");
-               // p1000CallBacks.failureCallback("PBOC Transaction fail");
-               // p1000CallBacks.failureCallback(getFailJSON("PBOC Transaction fail Card Terminate", 404));
-                setResult(false, "PBOC Transaction fail Card Terminate", 404, new Gson().toJson(resp), p1000CallBacks);
-
+                //setResult(false, "PBOC Transaction fail Card Terminate", 404, new Gson().toJson(resp), p1000CallBacks);
+                Log.d("Dhanu","Respons"+new Gson().toJson(resp));
                 boolean allowRev = true;
                 if (!req.getRequestcode().equalsIgnoreCase(Constants.MICRO_BAL_ENQ)) {
                     if (resp.getRespCode() == null) {
@@ -1252,9 +1236,7 @@ public class onlinePBOCListener implements OnPBOCListener {
                 } else {
                     maskedCardNo = cardno.substring(0, 6) + "******" + cardno.substring(cardno.length() - 4);
                 }
-
                 //code : -3 : Blocked/Locked Card,  -11 : Declined By Device 9F27, -8 : Timeout case, -2 = Chip remove before second generate TC command
-
 
                 if (code == 0) {
                     //Success at router but declined by device without remove chip/fail second TC
@@ -1284,7 +1266,7 @@ public class onlinePBOCListener implements OnPBOCListener {
                     }
                 } else {
                     if (isTxOL && !resp.isStatus()) {
-                       // context.updateData(resp);
+                        // context.updateData(resp);
                         setResult(false, "Failed", 99, new Gson().toJson(resp), p1000CallBacks);
 
                     } else {
@@ -1314,10 +1296,7 @@ public class onlinePBOCListener implements OnPBOCListener {
                         resp.setCardType("-");
                         resp.setHitachiResCode("" + code);
                         online_transaction.sendEmptyMessage(ONLINE_PROCESS_FINISH);
-                        if (code != DeviceErrorCodes.DECLINEDBY_DEVICE)
-                            setResult(false, "Device Declined", 99, new Gson().toJson(resp), p1000CallBacks);
-                        else
-                            DE39 = "E1";
+                        setResult(false, "Device Declined", 99, new Gson().toJson(resp), p1000CallBacks);
                     }
                 }
                 //online_transaction.sendEmptyMessage(ONLINE_PROCESS_FINISH);
@@ -1337,7 +1316,7 @@ public class onlinePBOCListener implements OnPBOCListener {
                         } catch (Exception e) {
                             e.printStackTrace();
                         }
-                      //  context.updateData(resp);
+                        //  context.updateData(resp);
                     }
                 } else {
                     try {
@@ -1390,38 +1369,6 @@ public class onlinePBOCListener implements OnPBOCListener {
                 //online_transaction.sendEmptyMessage(ONLINE_PROCESS_FINISH);
             }
 
-            /*Looper.prepare();
-            AlertDialog.Builder alertDialog = new AlertDialog.Builder(ba.getActivity());
-            alertDialog.setTitle("Reevrsal");
-            alertDialog.setMessage("Enter Resp Code");
-
-            final EditText input = new EditText(ba.getActivity());
-            LinearLayout.LayoutParams lp = new LinearLayout.LayoutParams(
-                    LinearLayout.LayoutParams.MATCH_PARENT,
-                    LinearLayout.LayoutParams.MATCH_PARENT);
-            input.setLayoutParams(lp);
-            alertDialog.setView(input);
-
-            final String[] password = new String[1];
-
-            alertDialog.setPositiveButton("YES",
-                    new DialogInterface.OnClickListener() {
-                        public void onClick(DialogInterface dialog, int which) {
-                            password[0] = input.getText().toString();
-                            callRevRequest("arpc", "data5513", resp, password[0]);
-                        }
-                    });
-
-            alertDialog.setNegativeButton("NO",
-                    new DialogInterface.OnClickListener() {
-                        public void onClick(DialogInterface dialog, int which) {
-                            dialog.cancel();
-                            ba.updateData(resp);
-                        }
-                    });
-
-            alertDialog.show();
-            Looper.loop();*/
 
         } catch (Exception e) {
             e.printStackTrace();
@@ -1463,7 +1410,7 @@ public class onlinePBOCListener implements OnPBOCListener {
         //Faulty Chip Error Code : 65281,65297
         Log.d("SHANKY", "ERROR : " + result.getExtras().toString());
         Log.d("SHANKY", "ERROR Code: " + result.getExtras().get("code").toString());
-       // context.dismissDialog();
+        // context.dismissDialog();
         if (result.getExtras().get("code").toString().equalsIgnoreCase("" + DeviceErrorCodes.FALLBACK)) {
             isEmvForced = true;
             resp.setStatus(false);
@@ -1538,7 +1485,7 @@ public class onlinePBOCListener implements OnPBOCListener {
                 StaticValues.setCustSign(mSignature.getSignature());
                 dialog.dismiss();
                 try {
-                 //   ServiceManager.getInstence().getPboc().comfirmSinature();
+                    //   ServiceManager.getInstence().getPboc().comfirmSinature();
                 } catch (Exception e) {
                     e.printStackTrace();
                 }
@@ -1563,7 +1510,7 @@ public class onlinePBOCListener implements OnPBOCListener {
         Log.d("OPS", "" + ops);
         RequestParams r = new RequestParams();
         if (this.req.getRequestcode().equalsIgnoreCase(Constants.MICRO_CASH_WITHDRAW_SBM))
-            r.setRequestcode(Constants.wsReversalMatm);
+            r.setRequestcode(Constants.wsReversalMatmSbm);
         else
             r.setRequestcode(Constants.wsReversal);
 
@@ -1590,39 +1537,32 @@ public class onlinePBOCListener implements OnPBOCListener {
             public void onResponseSuccess(Response<ResponseParams> response, SuccessCustomDialog d) {
                 if (response.body() != null) {
                     Log.d("Status Msg", "" + response.body().getMsg());
-                    p1000CallBacks.successCallback(getFailJSON("Status Msg"+response.body().getMsg(),101));
                     if (response.body().getStatus() == true) {
                         if (d != null)
                             d.cancel();
 
                         resp.setStatus(false);
                         resp.setMsg("Reversal Done");
-
                     } else {
                         if (d != null)
                             d.cancel();
-                        p1000CallBacks.successCallback(getFailJSON("Reversal Fail",101));
                         resp.setMsg("Reversal Fail");
-
                     }
                 } else {
                     if (d != null)
                         d.cancel();
                     resp.setMsg("Reversal Fail");
-                    p1000CallBacks.successCallback(getFailJSON("Reversal Fail",102));
-
                 }
                 try {
-                    setResult(true, "Reversal", 100, (new Gson().toJson(resp)), p1000CallBacks);
+                    setResult(false, "Reversal", 100, (new Gson().toJson(resp)), p1000CallBacks);
                 } catch (Exception e) {
                 }
-                setResult(true, "Reversal", 100, (new Gson().toJson(resp)), p1000CallBacks);
+                // setResult(true, "Reversal", 100, (new Gson().toJson(resp)), p1000CallBacks);
             }
 
             @Override
             public void onResponseFailure(Throwable throwable, SuccessCustomDialog d) {
-                p1000CallBacks.failureCallback(getFailJSON("Check Internet Connection"+throwable.getMessage(), 404));
-
+                p1000CallBacks.failureCallback(getFailJSON("Transaction Declined By Device - Error while sending reversal", 404));
             }
         });
     }

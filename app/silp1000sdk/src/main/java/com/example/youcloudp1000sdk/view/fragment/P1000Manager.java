@@ -49,26 +49,17 @@ import retrofit2.Response;
 
 /**
  * Created by shankar.savant on 6/9/2017.
+ *
+ * Version 1.7
  */
 
 public class P1000Manager implements TransactionCallback {
 
     // View view;
-    Button btnLogin, btnLoadMainKeys, btnLoadWorkKeys;
-    private String from = "", getAmt = "1", getRemark = "";
-    String tipamt = "0", currencyname = "", currencycode = "", op = "", status = "", cash_back_amt = "",
-            cvm_tag = "", loc_flag = "", modeofPay = "", recharge_type = "", mobile_no = "",
-            operator_name = "", operator_code = "", tvr = "", tsi = "", aid = "";
     RequestParams req = new RequestParams();
-    String latLang = "";
 
     private int area = 1;
     private int tmkindex = 1;
-
-    int cnt = 0;
-    boolean isReady = false, isLocAvail = false;
-
-    String respCode = "";
 
     //SIL Keys
     private String defProtectKey = "11111111111111111111111111111111";
@@ -81,38 +72,12 @@ public class P1000Manager implements TransactionCallback {
     private String defTDKey = "1F690B570A32F8A05AE7C3AE4D5F437D";
     private String defTDKeyKcv = null;
     private static P1000Request P1000Request = null;
-    public static byte[] plainTrackKey;
-
-    //Maximus keys
-     /*private String defProtectKey = "11111111111111111111111111111111";
-     private String defMainKey = "58F79846627581D602BBC8E2DCE333C3";
-     private String defMainKeyKcv = "5E22CB27";//163AC02F
-     private String defMacKey = "AFEBF49CA262712933F4DAB70C093B9C";
-     private String defMacKeyKcv = null;//91CD3A3A
-     private String defPinKey = "AFEBF49CA262712933F4DAB70C093B9C";
-     private String defPinKeyKcv = null;
-     private String defTDKey = "AFEBF49CA262712933F4DAB70C093B9C";
-     private String defTDKeyKcv = null;*/
 
     private String validateId = "";
-    String fName;
     Context getActivity;
-    protected ProcessDialog processdialog = null;
-    Button btnStartLogs;
-    P1000CallBacks p1000CallBacks;
     private static P1000Manager ourInstance;
     private static String ucubeKey = null;
     private static boolean KEYSLOADED = false;
-/*
-    @Override
-    public View onCreateView(LayoutInflater inflater, ViewGroup container,
-                             Bundle savedInstanceState) {
-        getActivity().getWindow().setSoftInputMode(WindowManager.LayoutParams.SOFT_INPUT_ADJUST_PAN);
-        view = inflater.inflate(R.layout.you_activity_main, container, false);
-        initialize(view);
-        return null;
-    }
-*/
 
     public String getTransactionId() {
         return AndyUtility.getRRN((getISOField11(6)));
@@ -161,7 +126,7 @@ public class P1000Manager implements TransactionCallback {
 
     public static P1000Manager getInstance(Context mainActivity, String key) {
 
-      if (ourInstance == null) {
+        if (ourInstance == null) {
             ourInstance = new P1000Manager(mainActivity);
             ucubeKey = key;
 
@@ -188,7 +153,7 @@ public class P1000Manager implements TransactionCallback {
 
                 StaticValues.setIsY2000(true);
                 Log.d("SHANKY", "INIT Y2000 SUCCESS");
-             //   Toast.makeText(mainActivity, "Success init", Toast.LENGTH_SHORT).show();
+                //   Toast.makeText(mainActivity, "Success init", Toast.LENGTH_SHORT).show();
 
                 DeviceInfoBinder deviceInfoBinder = ServiceManager.getInstence().getDeviceinfo();
                 if (deviceInfoBinder != null) {
@@ -196,7 +161,7 @@ public class P1000Manager implements TransactionCallback {
                     //P2000L, P1000,P500
                     Log.d("SHANKY", "DEV Type : " + deviceInfoBinder.getDeviceType());
 
-                 //   Toast.makeText(mainActivity, "Device Type" + deviceInfoBinder.getDeviceType(), Toast.LENGTH_SHORT).show();
+                    //   Toast.makeText(mainActivity, "Device Type" + deviceInfoBinder.getDeviceType(), Toast.LENGTH_SHORT).show();
 
                 }
             } catch (LinkageError e) {
@@ -258,21 +223,12 @@ public class P1000Manager implements TransactionCallback {
                             }
                         } else {
                             setResult(response.body().isStatus(), "FAILED", response.code(), response.message(), p1000CallBacks);
-
-                            //  FailCustomDialog failCustomDialog = new FailCustomDialog(getActivity, "Fail", "" + response.body().getMsg(), "");
-                            //  failCustomDialog.show();
                         }
                     } else {
-                        setResult(response.body().isStatus(), "FAILED", response.code(), response.message(), p1000CallBacks);
-
-                        //  FailCustomDialog failCustomDialog = new FailCustomDialog(getActivity, "Fail", "Key Is NULL", "");
-                        // failCustomDialog.show();
+                        setResult(response.body().isStatus(), "Key Is NULL", response.code(), response.message(), p1000CallBacks);
                     }
                 } else {
                     setResult(response.body().isStatus(), "FAILED", 99, "Check Internet Connection:Null Responce", p1000CallBacks);
-
-                    // FailCustomDialog failCustomDialog = new FailCustomDialog(getActivity, "Fail", "Check Internet Connection:Null Responce", "");
-                    //  failCustomDialog.show();
                 }
             }
 
@@ -281,7 +237,7 @@ public class P1000Manager implements TransactionCallback {
                 Log.e("", throwable.toString());
                 d.cancel();
                 setResult(false, "FAILED", 99, "Fail ,Check Internet Connection", p1000CallBacks);
-        }
+            }
 
         }, new SuccessCustomDialog(getActivity, "Loading Key", "Please Wait", ""));
     }
@@ -570,14 +526,14 @@ public class P1000Manager implements TransactionCallback {
             }
 
             if (iRet) {
-              if (iRet) {
+                if (iRet) {
                     loadMacKey(p1000Request, p1000CallBacks);
                 } else {
                     p1000CallBacks.failureCallback(getFailJSON("Unable to load TD key", 100));
                 }
 
             } else {
-                  Toast.makeText(getActivity, "load td Key error", Toast.LENGTH_LONG).show();
+                Toast.makeText(getActivity, "load td Key error", Toast.LENGTH_LONG).show();
             }
         } catch (Exception e) {
             e.printStackTrace();
@@ -585,7 +541,8 @@ public class P1000Manager implements TransactionCallback {
         }
     }
 
-private JSONObject getFailJSON(String msg, int responseCode) {
+
+    private JSONObject getFailJSON(String msg, int responseCode) {
         JSONObject jsonObject = new JSONObject();
         try {
             jsonObject.put("Msg", "Failed");
@@ -596,6 +553,7 @@ private JSONObject getFailJSON(String msg, int responseCode) {
         }
         return jsonObject;
     }
+
 
     private void startPayment(P1000Request p1000Request, P1000CallBacks p1000CallBacks, String flag) {
         try {
@@ -677,7 +635,7 @@ private JSONObject getFailJSON(String msg, int responseCode) {
         }
     }
 
-   private void setResult(boolean status, String message, int responseCode, String responseJson, P1000CallBacks p1000CallBacks) {
+    private void setResult(boolean status, String message, int responseCode, String responseJson, P1000CallBacks p1000CallBacks) {
         try {
             if (p1000CallBacks != null) {
                 JSONObject jsonObject = new JSONObject();
@@ -696,6 +654,7 @@ private JSONObject getFailJSON(String msg, int responseCode) {
             e.printStackTrace();
         }
     }
+
 
 
     private void checkTrasctionStatus(final P1000Request p1000Request, final StatusCallBack statusCallBack) {
