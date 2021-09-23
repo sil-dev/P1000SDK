@@ -303,8 +303,10 @@ public class onlinePBOCListener implements OnPBOCListener {
                     Log.d("SHANKY", "Pinpad show");
                     try {
                         ServiceManager.getInstence().getPinpad().setPinpadMode(GlobalDef.MODE_RANDOM);
+                         Log.d("SHANKY", "Pinpad Open");
                     } catch (Exception e1) {
                         e1.printStackTrace();
+                         Log.d("SHANKY", e1.getMessage());
                     }
 
                     String maskedCardNo = "";
