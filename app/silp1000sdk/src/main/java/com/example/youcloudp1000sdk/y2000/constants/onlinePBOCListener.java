@@ -1309,18 +1309,18 @@ public class onlinePBOCListener implements OnPBOCListener {
                             //  context.freshProcessDialog("Reversal", "Please wait...");
                             callRevRequest(req,"arpc", "data5513", resp, DE39);
                         } else {
-                            setResult(false, "Failed", 99, new Gson().toJson(resp), p1000CallBacks);
+                            setResult(false, "Declined By Device : "+code, 99, new Gson().toJson(resp), p1000CallBacks);
                             //  context.updateData(resp);
                         }
                     } else {
                         try {
-                            setResult(false, "Failed", 99, new Gson().toJson(resp), p1000CallBacks);
+                            setResult(false, "Declined By Device : "+code, 99, new Gson().toJson(resp), p1000CallBacks);
                         } catch (Exception e) {
                             e.printStackTrace();
                         }
                         //  context.updateData(resp);
                     }
-                } else {
+                }/* else {
                     try {
                         //context.dismissDialog();
                     } catch (Exception e) {
@@ -1328,7 +1328,7 @@ public class onlinePBOCListener implements OnPBOCListener {
                     }
                     if (isTxOL)
                         setResult(false, "Failed", 99, new Gson().toJson(resp), p1000CallBacks);
-                }
+                }*/
             } else {
                 Log.d("SHANKY", "PBOC Transaction fail : " + result);
 
