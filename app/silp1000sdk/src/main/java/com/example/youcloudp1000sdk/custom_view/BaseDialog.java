@@ -58,15 +58,15 @@ public abstract class BaseDialog extends Dialog {
          //   dialogWindow.setWindowAnimations(R.style.dialog_anim_center);
         }
 	    
-	     show();
+	    // show();
 
-      /*  if (!((Activity) iContext).isFinishing())
+        if (!((Activity) iContext).isFinishing())
         {
             show();
         }
         else {
             Toast.makeText(iContext, "Activity is not running plz check", Toast.LENGTH_SHORT).show();
-        } */
+        }
     }
 
     /**
@@ -122,14 +122,14 @@ public abstract class BaseDialog extends Dialog {
         } else {
           //  dialogWindow.setWindowAnimations(R.style.dialog_anim_center);
         }
-	      show();
-       /*  if (!((Activity) iContext).isFinishing())
+	     // show();
+         if (!((Activity) iContext).isFinishing())
         {
             show();
         }
         else {
             Toast.makeText(iContext, "Activity is not running plz check", Toast.LENGTH_SHORT).show();
-        } */
+        }
     }
 
     /**
