@@ -5,6 +5,9 @@ import android.content.Context;
 import android.view.Gravity;
 import android.view.Window;
 import android.view.WindowManager;
+import android.app.Activity;
+import android.widget.Toast;
+
 
 import com.example.youcloudp1000sdk.R;
 
