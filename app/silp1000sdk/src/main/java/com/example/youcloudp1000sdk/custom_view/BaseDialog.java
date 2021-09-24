@@ -57,14 +57,16 @@ public abstract class BaseDialog extends Dialog {
         } else {
          //   dialogWindow.setWindowAnimations(R.style.dialog_anim_center);
         }
+	    
+	     show();
 
-        if (!((Activity) iContext).isFinishing())
+      /*  if (!((Activity) iContext).isFinishing())
         {
             show();
         }
         else {
             Toast.makeText(iContext, "Activity is not running plz check", Toast.LENGTH_SHORT).show();
-        }
+        } */
     }
 
     /**
@@ -120,13 +122,14 @@ public abstract class BaseDialog extends Dialog {
         } else {
           //  dialogWindow.setWindowAnimations(R.style.dialog_anim_center);
         }
-         if (!((Activity) iContext).isFinishing())
+	      show();
+       /*  if (!((Activity) iContext).isFinishing())
         {
             show();
         }
         else {
             Toast.makeText(iContext, "Activity is not running plz check", Toast.LENGTH_SHORT).show();
-        }
+        } */
     }
 
     /**
@@ -157,12 +160,14 @@ public abstract class BaseDialog extends Dialog {
         dialogWindow.setAttributes(lp);
         // 设置载入载出动画
        // dialogWindow.setWindowAnimations(R.style.dialog_anim);
-        if (!((Activity) iContext).isFinishing())
+	    
+	      show();
+     /*  if (!((Activity) iContext).isFinishing())
         {
             show();
         }
         else {
             Toast.makeText(iContext, "Activity is not running plz check", Toast.LENGTH_SHORT).show();
-        }
+        } */
     }
 }
