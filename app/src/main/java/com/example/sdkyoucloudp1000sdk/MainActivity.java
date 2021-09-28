@@ -46,8 +46,7 @@ public class MainActivity extends AppCompatActivity {
 
         btnStartTransaction = findViewById(R.id.btnStartTransaction);
 
-        //p1000Manager = P1000Manager.getInstance(MainActivity.this, "yCPDTW1iDgCO3VSn8Orn5DmEQth8MTGj");
-            p1000Manager = P1000Manager.getInstance(MainActivity.this,"yCPDTW1iDgCO3VSn8Orn5DmEQth8MTGj");
+            p1000Manager = P1000Manager.getInstance(MainActivity.this,"KEY");
 
         btnStartTransaction.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -56,11 +55,11 @@ public class MainActivity extends AppCompatActivity {
                 showStatusDialog(true);
 
                 P1000Request p1000Request = new P1000Request();
-                p1000Request.setUsername("Avi");
+                p1000Request.setUsername("USER");
                 p1000Request.setPassword("1234");
                 p1000Request.setRefCompany("SIL");
-                p1000Request.setMid("442000227364352");
-                p1000Request.setTid("42099143");
+                p1000Request.setMid("MID");
+                p1000Request.setTid("TID");
                 p1000Request.setTransactionId(p1000Manager.getTransactionId());
                 p1000Request.setImei("3dc0c6f6b9429aas");
                 p1000Request.setImsi("null");

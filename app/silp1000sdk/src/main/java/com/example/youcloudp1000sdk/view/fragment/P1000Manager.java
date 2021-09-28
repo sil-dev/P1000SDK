@@ -62,14 +62,14 @@ public class P1000Manager implements TransactionCallback {
     private int tmkindex = 1;
 
     //SIL Keys
-    private String defProtectKey = "11111111111111111111111111111111";
-    private String defMainKey = "E5B6AC8CB1147317EDBB065494F20BED";
-    private String defMainKeyKcv = "163AC02F";//163AC02F
-    private String defMacKey = "1F690B570A32F8A05AE7C3AE4D5F437D";
+    private String defProtectKey = "";
+    private String defMainKey = "";
+    private String defMainKeyKcv = "";//163AC02F
+    private String defMacKey = "";
     private String defMacKeyKcv = null;//91CD3A3A
-    private String defPinKey = "1F690B570A32F8A05AE7C3AE4D5F437D";
+    private String defPinKey = "";
     private String defPinKeyKcv = null;
-    private String defTDKey = "1F690B570A32F8A05AE7C3AE4D5F437D";
+    private String defTDKey = "";
     private String defTDKeyKcv = null;
     private static P1000Request P1000Request = null;
 
