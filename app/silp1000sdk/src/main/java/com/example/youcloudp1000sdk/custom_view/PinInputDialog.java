@@ -19,6 +19,7 @@ import com.example.youcloudp1000sdk.y2000.constants.helper.TextViewHelper;
 import com.example.youcloudp1000sdk.y2000.constants.listeners.DeviceTools;
 import com.example.youcloudp1000sdk.y2000.constants.listeners.OnGetLayoutSucListener;
 import com.example.youcloudp1000sdk.y2000.constants.listeners.OnPinDialogListener;
+import com.example.youcloudp1000sdk.y2000.constants.listeners.OnPinInputListener;
 
 import java.util.List;
 import java.util.Timer;
@@ -84,45 +85,64 @@ public class PinInputDialog extends BaseDialog {
         tx_amt = (TextView) findViewById(R.id.tx_amt);
         ll_close = (RelativeLayout) findViewById(R.id.rl_close);
         ll_close.setOnClickListener(new View.OnClickListener() {
-
             @Override
             public void onClick(View arg0) {
                 // TODO Auto-generated method stub
+                if (listener != null)
+                    listener.OnPinInput(OnPinInputListener.CANCEL);
                 dismiss();
             }
-        });
+            //dismiss();
 
-        // iv_close.setOnClickListener(new View.OnClickListener() {
-        //
-        // @Override
-        // public void onClick(View arg0) {
-        // // TODO Auto-generated method stub
-        // if (listener != null)
-        // listener.OnPinInput(OnPinInputListener.CANCEL);
-        // dismiss();
-        // }
-        // });
+    });
 
-        fl_keyboard = (FrameLayout) findViewById(R.id.fl_keyboard);
+    // iv_close.setOnClickListener(new View.OnClickListener() {
+    //
+    // @Override
+    // public void onClick(View arg0) {
+    // // TODO Auto-generated method stub
+    // if (listener != null)
+    // listener.OnPinInput(OnPinInputListener.CANCEL);
+    // dismiss();
+    // }
+    // });
+
+    fl_keyboard =(FrameLayout)
+
+    findViewById(R.id.fl_keyboard);
         fl_keyboard.removeAllViews();
-        keyBoardView = new KeyBoardViewOK(iContext);
-        fl_keyboard.addView(keyBoardView.getKeyBoardView(), new LayoutParams(LayoutParams.MATCH_PARENT, LayoutParams.MATCH_PARENT));
-        if (DeviceTools.getDeviceModel().equals(DeviceTools.P8000) || DeviceTools.getDeviceModel().equals(DeviceTools.P8000S)) {
-            ll_Keyboard = (LinearLayout) findViewById(R.id.ll_keyboard);
-            ll_Keyboard.setVisibility(View.INVISIBLE);
-            ll_close.setVisibility(View.INVISIBLE);
-        }
-        //动画需要200ms，所以过200ms回调
-        new Timer().schedule(new TimerTask() {
+    keyBoardView =new
 
-            @Override
-            public void run() {
-                // TODO Auto-generated method stub
-                listener.OnCreateOver();
-            }
-        }, 200);
+    KeyBoardViewOK(iContext);
+        fl_keyboard.addView(keyBoardView.getKeyBoardView(),new
 
+    LayoutParams(LayoutParams.MATCH_PARENT, LayoutParams.MATCH_PARENT));
+        if(DeviceTools.getDeviceModel().
+
+    equals(DeviceTools.P8000) ||DeviceTools.getDeviceModel().
+
+    equals(DeviceTools.P8000S))
+
+    {
+        ll_Keyboard = (LinearLayout) findViewById(R.id.ll_keyboard);
+        ll_Keyboard.setVisibility(View.INVISIBLE);
+        ll_close.setVisibility(View.INVISIBLE);
     }
+    //动画需要200ms，所以过200ms回调
+        new
+
+    Timer().
+
+    schedule(new TimerTask() {
+
+        @Override
+        public void run () {
+            // TODO Auto-generated method stub
+            listener.OnCreateOver();
+        }
+    },200);
+
+}
 
     /**
      * 设置密码键盘的显示

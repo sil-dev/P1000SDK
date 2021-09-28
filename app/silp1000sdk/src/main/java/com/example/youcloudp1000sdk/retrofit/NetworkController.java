@@ -1,6 +1,9 @@
 package com.example.youcloudp1000sdk.retrofit;
 
 
+import android.app.Activity;
+import android.content.Context;
+
 import com.example.youcloudp1000sdk.custom_view.SuccessCustomDialog;
 import com.example.youcloudp1000sdk.utils.MyConst;
 import com.facebook.stetho.okhttp3.StethoInterceptor;

@@ -4,6 +4,7 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.annotation.SuppressLint;
 import android.app.ProgressDialog;
+import android.content.Intent;
 import android.os.AsyncTask;
 import android.os.Bundle;
 import android.util.Log;
@@ -21,15 +22,18 @@ import com.example.youcloudp1000sdk.view.fragment.P1000Manager;
 import org.json.JSONException;
 import org.json.JSONObject;
 
+
 public class MainActivity extends AppCompatActivity {
 
     //SHANKY
-    P1000Manager p1000Manager;
     TextView statusTv, responseCodeTv, responseMessageTv, version;
     CustomDialog customDialog;
 
     protected ProcessDialog processdialog = null;
     Button btnStartTransaction;
+
+    P1000Manager p1000Manager;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -42,8 +46,8 @@ public class MainActivity extends AppCompatActivity {
 
         btnStartTransaction = findViewById(R.id.btnStartTransaction);
 
-       p1000Manager = P1000Manager.getInstance(MainActivity.this,"yCPDTW1iDgCO3VSn8Orn5DmEQth8MTGj");
-
+        //p1000Manager = P1000Manager.getInstance(MainActivity.this, "yCPDTW1iDgCO3VSn8Orn5DmEQth8MTGj");
+            p1000Manager = P1000Manager.getInstance(MainActivity.this,"yCPDTW1iDgCO3VSn8Orn5DmEQth8MTGj");
 
         btnStartTransaction.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -65,7 +69,7 @@ public class MainActivity extends AppCompatActivity {
                 p1000Manager.execute(p1000Request, new P1000CallBacks() {
                     @Override
                     public void successCallback(JSONObject jsonObject) {
-                       hideDialog();
+                        hideDialog();
                         Log.d("SHANKY", "successCallback: " + jsonObject);
                         try {
                             String status = "Success";
@@ -78,7 +82,7 @@ public class MainActivity extends AppCompatActivity {
                                 responseCode = jsonObject.getInt("ResponseCode");
                             }
                             if (jsonObject.has("Response")) {
-                             //   responseMessage = jsonObject.getJSONObject("Response");
+                                //   responseMessage = jsonObject.getJSONObject("Response");
 
                                 responseMessage = jsonObject.getString("Response");
                             }
@@ -103,7 +107,7 @@ public class MainActivity extends AppCompatActivity {
 
                     @Override
                     public void progressCallback(String message) {
-                      //  hideDialog();
+                        //  hideDialog();
                         Log.d("SHANKY", "progressCallback: " + message);
                         updateTransactionMessage(message);
                     }
@@ -167,53 +171,48 @@ public class MainActivity extends AppCompatActivity {
             }
         });
     }
-    
-     @Override
-    protected void onStart()
-    { super.onStart();
-    Log.d("lifecycle","onStart invoked");
+
+    @Override
+    protected void onStart() {
+        super.onStart();
+        Log.d("lifecycle", "onStart invoked");
     }
 
     @Override
-    public void onBackPressed()
-    {
-        moveTaskToBack(true);
+    public void onBackPressed() {
+        //super.onBackPressed();
+        //android.os.Process.killProcess();
+        // moveTaskToBack(true);
+    }
+    @Override
+    protected void onResume() {
+        super.onResume();
+        Log.d("lifecycle", "onResume invoked");
     }
 
     @Override
-    protected void onResume()
-    { super.onResume();
-    Log.d("lifecycle","onResume invoked");
-    }
-
-    @Override
-    protected void onPause()
-    {
+    protected void onPause() {
         super.onPause();
-        Log.d("lifecycle","onPause invoked");
+        Log.d("lifecycle", "onPause invoked");
     }
+
     @Override
-    protected void onStop()
-    {
+    protected void onStop() {
         super.onStop();
-        Log.d("lifecycle","onStop invoked");
+        Log.d("lifecycle", "onStop invoked");
     }
 
     @Override
-    protected void onRestart()
-    {
+    protected void onRestart() {
         super.onRestart();
-        Log.d("lifecycle","onRestart invoked");
+        Log.d("lifecycle", "onRestart invoked");
     }
 
     @Override
-    protected void onDestroy()
-    {
+    protected void onDestroy() {
         super.onDestroy();
-        Log.d("lifecycle","onDestroy invoked");
+        Log.d("lifecycle", "onDestroy invoked");
     }
-
-
 
 
     private void showStatusDialog(boolean show) {
@@ -232,10 +231,11 @@ public class MainActivity extends AppCompatActivity {
     private void hideDialog() {
         runOnUiThread(() -> showStatusDialog(false));
     }
+
     @SuppressLint("SetTextI18n")
     private void setMessage(final String status, final int responseCode,
                             final String responseMessage) {
-        runOnUiThread(() -> {
+       /* runOnUiThread(() -> {
             if (statusTv != null && status != null && !status.isEmpty()) {
                 statusTv.setText(status);
             }
@@ -245,7 +245,12 @@ public class MainActivity extends AppCompatActivity {
             if (responseMessageTv != null && responseMessage != null && !responseMessage.isEmpty()) {
                 responseMessageTv.setText(responseMessage);
             }
-        });
+        });*/
+
+        Intent i = new Intent(MainActivity.this, ActivityThird.class);
+        startActivity(i);
+        finish();
+        return;
     }
 
 }

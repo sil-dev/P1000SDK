@@ -29,12 +29,12 @@ public class KeyBoardViewOK implements ICupBaseView, OnClickListener {
 	byte[] keylayout = new byte[104];
 	int pos = 0;
 
-	@SuppressWarnings("static-access")
+	//@SuppressWarnings("static-access")
 	public KeyBoardViewOK(Context context) {
 		this.mContext = context;
 	}
 
-	private static Context mContext;
+	private Context mContext;
 	public TextView num0, num1, num2, num3, num4, num5, num6, num7, num8, num9;
 	public LinearLayout numBack,numok;
 	private View topLine;

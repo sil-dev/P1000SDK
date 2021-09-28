@@ -132,7 +132,6 @@ public class onlinePBOCListener implements OnPBOCListener {
             Log.d("SHANKY", "Pinpad error code:" + errorCode);
             p1000CallBacks.failureCallback(getFailJSON("Pinpad Error Code:", errorCode));
             try {
-
                 pinpad_model.sendEmptyMessage(PIN_DIALOG_DISMISS);
             } catch (Exception e) {
                 e.printStackTrace();

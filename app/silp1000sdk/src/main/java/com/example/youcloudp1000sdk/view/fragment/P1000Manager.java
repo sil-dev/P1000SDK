@@ -125,10 +125,15 @@ public class P1000Manager implements TransactionCallback {
     }
 
     public static P1000Manager getInstance(Context mainActivity, String key) {
+        ucubeKey = key;
+        return new P1000Manager(mainActivity);
+    }
+
+    public static P1000Manager initSdk(Context mainActivity) {
 
         if (ourInstance == null) {
             ourInstance = new P1000Manager(mainActivity);
-            ucubeKey = key;
+            //ucubeKey = key;
 
             try {
                 //Stetho initializer
