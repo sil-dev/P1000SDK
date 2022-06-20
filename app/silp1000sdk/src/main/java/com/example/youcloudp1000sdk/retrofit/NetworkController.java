@@ -29,8 +29,11 @@ import retrofit2.converter.gson.GsonConverterFactory;
 public class NetworkController {
 
     //SDK URL
-    public static final String MAIN_URL = "https://app.youcloudpayment.in/";
-    public static String BASE_URL = MAIN_URL + "sdk/";
+   // public static final String MAIN_URL = "https://app.youcloudpayment.in/";
+  //  public static String BASE_URL = MAIN_URL + "sdk/";
+
+      public static final String MAIN_URL = "http://199.34.22.225:9087/";
+     public static final String BASE_URL = MAIN_URL + "YouCloudMiddleware/";
 
     private ApiListener apiService;
 
