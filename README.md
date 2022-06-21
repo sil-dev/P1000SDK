@@ -84,6 +84,7 @@ e.g
         });
 ```
 4. P1000Manager implement the method for success, failure and progress state.
+```
 	
 	i. 	**public void successCallback(JSONObject jsonObject);** <br>
 			The above method is called when the transaction is success. 
@@ -93,5 +94,5 @@ e.g
 
  	iii. **public void progressCallback(String message)** <br>
  			
-
+```
 
