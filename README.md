@@ -27,8 +27,6 @@ e.g
 
 ### Add the below permission in the manifest file 
 
-    <uses-permission android:name="android.permission.BLUETOOTH" />
-    <uses-permission android:name="android.permission.BLUETOOTH_ADMIN" />
     <uses-permission android:name="android.permission.INTERNET" />
     <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
     <uses-permission android:name="android.permission.SYSTEM_ALERT_WINDOW" />
@@ -65,7 +63,7 @@ note: The Transaction Id is returned in the Response Callback i.e successCallbac
 ```
 p1000Manager.getTransactionId()
 ```
-3. Once the Ucuberequest object is created and set proceed with the excecution.
+3. Once the p1000Request object is created and set proceed with the excecution.
 e.g 
 ```
 	p1000Manager.execute(uCubeRequest,new UCubeCallBacks() {
@@ -85,7 +83,7 @@ e.g
             }
         });
 ```
-4. p1000Manager implement the method for success, failure and progress state.
+4. P1000Manager implement the method for success, failure and progress state.
 	
 	i. 	**public void successCallback(JSONObject jsonObject);** <br>
 			The above method is called when the transaction is success. 
@@ -94,42 +92,6 @@ e.g
  			The above method is called when the transaction is failed due to some issues.
 
  	iii. **public void progressCallback(String message)** <br>
- 			The above method is called to show the message about the current status. This message can be displayed to the end-user refelcting the state of Ucube Device.
-5. The UCubeManager also provide service to check the status of your transaction. To check the transaction status use below method
+ 			
 
-```
-     uCubeManager.checkStatus(uCubeRequest, new StatusCallBack() {
-            @Override
-            public void successCallback(JSONObject jsonObject) {
-              
-            }
 
-            @Override
-            public void failureCallback(JSONObject jsonObject) {
-            
-            }
-        });
-```
-note : Check status method is applicable only for transaction type TransactionType.INQUIRY
-
-6. Response Code 
-```
-00:  SUCCESS 
-100: FAILURE
-101 : DEVICE DISCONNECTED
-102: BLUETOOTH DISCONNECTED
-103: CARD WAIT FAILED
-104: TRANSACTION CANCELLED 
-105: TIMED OUT
-106: REFUSED CARD
-107: REVERSAL
-109: UNKOWN 
-
-201: PACKAGE NAME ERROR
-202: REQUEST CODE ERROR( IN CASE ANY REQUEST PARAMS ARE MISSING)
-203: CONTEXT IS NULL
-204: IF LICENSE KEY IS NULL
-205: INVALID PROJECT (LICENSE KEY MISMATCH)
-206: TRANSACTION ID MISSING 
-207: NETWORK FAILURE
-```
