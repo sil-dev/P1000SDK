@@ -36,16 +36,16 @@ e.g
 1. Initialize the UCubeManager with the context and your provided License-Key.
 e.g
 ```
-P1000Manager p1000Manager = P1000Manager.getInstance(Context,License-key);
+P1000Manager p1000Manager = P1000Manager.getInstance(Context,<LICENKEY-PRIVIDED-BY-SIL>);
 ```
 2. Create an Object of P1000Request and set the respective fields:
 ```
    P1000Request p1000Request = new P1000Request();
-                p1000Request.setUsername("username");
+                p1000Request.setUsername("USERNAME-PRIVIDED-BY-SIL");
                 p1000Request.setPassword("password");
-                p1000Request.setRefCompany("SIL");
-                p1000Request.setMid("mid");
-                p1000Request.setTid("tid");
+                p1000Request.setRefCompany("REFERENCE_COMPID-PRIVIDED-BY-SIL");
+                p1000Request.setMid("MID-PRIVIDED-BY-SIL");
+                p1000Request.setTid("TID-PRIVIDED-BY-SIL");
                 p1000Request.setTransactionId(p1000Manager.getTransactionId());
                 p1000Request.setImei("imei");
                 p1000Request.setImsi("null");
